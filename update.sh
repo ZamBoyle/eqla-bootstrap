@@ -1,5 +1,4 @@
 #!/bin/sh
-#git fetch --all
-#git reset --hard origin/master
-git reset --hard HEAD
+git stash
 git pull
+git stash pop
