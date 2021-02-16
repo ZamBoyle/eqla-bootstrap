@@ -15,19 +15,22 @@
 
 <body>
     <div class="jumbotron text-center bg-secondary text-white">
-        <img src="/Images/logo_eqla.png" class="img-fluid" alt="logo d'Eqla" />
-        <h1>Exemples du cours</h1>
-        <p>Vous trouverez les exemples donnés dans le cours.</p>
+        <h1>Les Images</h1>
+        <p class="lead">Responsives, Thumbnail, Alignement de celles-ci.</p>
+    </div>
     </div>
     <div class="container">
-        <ul class="list-group">
-            <li class="list-group-item"><a href="IV.Integration-de-Bootstrap/">IV. Intégration de Bootstrap</a>.</li>
-            <li class="list-group-item"><a href="V.Fonctionnement de Bootstrap/">V. Fonctionnement de Bootstrap</a>.</li>
-            <li class="list-group-item"><a href="VI.Manipulation du texte/">VI. Manipulation du texte</a>.</li>
-            <li class="list-group-item"><a href="VII.Les images/">VII. Les images</a>.</li>
-            <li class="list-group-item"><a href="VIII.Le composant Jumbotron/">VIII. Le composant Jumbotron</a>.</li>
-        </ul>
+        <h2>Image responsive avec l'attribut width à 10000 px.</h2>
+        <p class="lead">L'image ne fera biensûr jamais 10000 pixels. Bootstrap veille au grain.😊</p>
+        <img src="/Images/logo_eqla.png" class="img-fluid" alt="logo d'Eqla" width="10000px" />
+
+        <h2>Vignette d'une image</h2>
+        <p class="lead">Vignette d'une image. Cadre blanc avec coins arrondis.</p>
+        <img src="/Images/paris.jpg" class="img-thumbnail" alt="Image de paris" />
     </div>
+    <h2>Alignement d'images: .float-left et .float-right</h2>
+    <img src="/Images/logo_eqla.png" class="img-fluid float-left" alt="logo d'Eqla" />
+    <img src="/Images/paris.jpg" class="img-fluid img-thumbnail float-right" alt="Image de paris" />
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
