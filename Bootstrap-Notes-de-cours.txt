@@ -46,7 +46,7 @@ XI.	La Grille de Bootstrap	11
 2.	Classes pour un nombre de colonnes variables en fonction de la résolution	12
 3.	Mixe entre classes à nombre de colonnes fixes et variables	13
 XII.	Les couleurs	14
-XIII.	Les boutons	14
+XIII.	Les boutons	15
 XIV.	Les formulaires	15
 
 
@@ -375,7 +375,7 @@ Donc si la résolution est > = md, on aura 3 colonnes identiques (.col-md-4). D
 XII. Les couleurs
 Bootstrap dispose de plusieurs classes pour les couleurs. Aux classes .bg-* (pour le background d’un élément) et aux classes .text-* on ajoute un des suffixes suivants : 
 - primary : bleu 
-- seconday : gris-bleu 
+- secondary : gris 
 - success : vert 
 - danger : rouge 
 - warning : jaune 
@@ -384,7 +384,7 @@ Bootstrap dispose de plusieurs classes pour les couleurs. Aux classes .bg-* (pou
 - dark : gris très foncé 
 - body : noir 
 - muted : gris 
-- white : blanc 
+- white : blanc
 Par exemple un div avec un fond gris clair : 
 <div class= "container bg-light ">
         <p>Le fond de ce conteneur est gris clair</p>
@@ -396,13 +396,9 @@ Autre exemple, un div avec un fond rouge avec du texte blanc :
 Pour le texte les classes suivantes peuvent aussi être utilisées :
 - black-50 : texte noir semi transparent 
 - white-50 : texte blanc semi transparent
+Comme on peut le constater, Bootstrap fournit une cohérence dans l’utilisation des couleurs standards. Vous verrez que cette logique est suivie pour la couleur des boutons que nous allons justement voir au chapitre suivant.
 
-XIII. Les boutons
-Les classes Bootstrap pour les boutons sont faciles à utiliser. Pour 
 
-XIV. Les formulaires
-Bootstrap fournit un ensemble de classes qui permettent de rendre un formulaire beaucoup joli visuellement. De base, les formulaires html sont assez austères. Pour commencer, il faut bien entendu que le formulaire soit inclus dans la balise « form ».
-La classe .form-group
 
 
 
