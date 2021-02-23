@@ -1,5 +1,12 @@
 <?php
-function AddTop($title)
+
+/**
+ * Ajoute le top de la page: depuis <!DOCTYPE html> jusqu'à <body>
+ * 
+ * $title titre de la page
+ * $myHead code HTML à éventuellement ajouter dans le HEAD
+ */
+function AddTop($title, $myHead = "")
 {
 ?>
     <!DOCTYPE html>
@@ -10,6 +17,7 @@ function AddTop($title)
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php AddCSS(); ?>
+        <?php echo $myHead; ?>
         <title><?php echo $title ?></title>
     </head>
 
@@ -17,6 +25,9 @@ function AddTop($title)
     <?php
 }
 
+/**
+ * Ajoute le bas de la page: depuis </body> jusqu'à </html>
+ */
 function AddBottom()
 {
     AddJS();
@@ -27,6 +38,9 @@ function AddBottom()
 <?php
 }
 
+/**
+ * Ajoute le code HTML pour le chargement des fichiers CSS de Bootstrap
+ */
 function AddCSS()
 {
 ?>
@@ -38,6 +52,9 @@ function AddCSS()
 <?php
 }
 
+/**
+ * Ajoute le code HTML pour le chargement des fichiers JS nécessaires pour Bootstrap
+ */
 function AddJS()
 {
 ?>
