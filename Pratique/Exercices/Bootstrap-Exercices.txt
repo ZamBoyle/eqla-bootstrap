@@ -1,0 +1,72 @@
+﻿
+
+Formation Bootstrap
+Exercices 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Johnny Piette
+
+Pour les exercices, veuillez aller dans le répertoire bootstrap/Pratique/Exercices/
+Nous n’insérons qu’une seule fois les fichiers nécessaires à Bootstrap via des fichiers locaux. Nous utiliserons une page modèle appelée Template.html. Cela nous permettra de gagner du temps et de nous attarder uniquement à Bootstrap.
+Exercice n°1
+1. Créez une nouvelle page html dans VsCode.
+2. Ajoutez la feuille de style de Bootstrap qui se trouve dans le répertoire Styles :
+bootstrap.min.css
+3. Ajoutez les fichiers JS, qui se trouvent dans le répertoire JS, à la fin de la page juste avant la fermeture de la base body :
+jquery-3.5.1.slim.min.js
+bootstrap.bundle.min.js
+4. Créer votre première page Bootstrap en incluant un div avec la classe .container
+5. Ajoutez dans le div précédent ce texte « Hello World, from Bootstrap » en titre1 (h1). »
+6. Enregistrez sous votre fichier avec le nom Exercice1.html
+Exercice n°2
+1. Ouvrez dans VsCode la page Template.html
+2. Allez à la ligne n°18.
+3. Ajoutez un div avec la classe .container.
+4. Ajoutez dans le div précédent ce texte « Hello World, from Bootstrap » en titre1 (h1).
+5. Enregistrez sous votre fichier avec le nom Exercice2.html
+Exercice n°3
+1. Ouvrez dans VsCode la page Template.html
+2. Allez à la ligne n°18.
+3. Mettez dans un h1 le texte suivant : « Hello World, from Bootstrap »
+4. Faites-en sorte que le texte de ce h1 soit centré.
+5. Enregistrez sous votre fichier avec le nom Exercice3.html
+Exercice n°4
+1. Ouvrez dans VsCode la page Template.html
+2. Allez à la ligne n°18.
+3. Dans un paragraphe, mettez ce texte en minuscules : « JE SUIS UN TEXTE EN MINUSCULES »
+4. Dans un paragraphe, mettez ce texte en majuscules : « je suis un texte en minuscules »
+5. Dans un paragraphe, placez à droite le texte : « Je suis placé à droite de l’écran »
+6. Dans un paragraphe, placez à droite le texte : « Je suis placé à droite de l’écran » si la résolution est d’au moins lg.
+7. Enregistrez sous votre fichier avec le nom Exercice4.html
+Exercice n°5
+1. Téléchargez une grande image sur Internet ou utilisez une que vous avez déjà.
+2. Ouvrez dans VsCode la page Template.html
+3. Allez à la ligne n°18.
+4. Ajoutez cette image sans qu’elle soit responsive.
+5. Ajoutez cette image pour qu’elle soit responsive.
+6. Ajoutez cette image et fais-en une vignette responsive.
+7. Enregistrez sous votre fichier avec le nom Exercice5.html
+Exercice n°6
+1. Ouvrez dans VsCode la page Template.html
+2. Allez à la ligne n°18.
+3. Ajoutez un jumbotron qui prend toute la largeur.
+4. Ajoutez-y un h1 avec le texte suivant : Je suis un beau Jumbotron
+5. Ajoutez-y un paragraphe avec ce texte : Je sers à mettre en évidence une information.
+6. Enregistrez sous votre fichier avec le nom Exercice6.html
+
+
+
+
+

@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
 
@@ -15,77 +16,101 @@
 
 <body>
     <!-- Votre code HTML à mettre en-dessous -->
-    <div class="jumbotron text-center">
+    <div class="jumbotron text-center pb-1 mb-0 border">
         <h1>XI. La Grille de Bootstrap</h1>
         <p class="lead">Elle permet de diviser l'écran en maximum 12 colonnes.</p>
-        <p class="lead">Les classes allant de <code>col-1</code> à <code>col-6</code></p>
+        <p class="lead">Les classes allant de <code>col-1</code> à <code>col-12</code></p>
     </div>
-    <div class="container bg-light rounded">
-        <h1 class="text-center">2 colonnes identiques: <code>.col-6</code></h1>
-        <div class="row flex-wrap">
-            <div class="col-6">
+    <div class="container bg-primary rounded bg-light border">
+        <h1 class="text-center">2 colonnes fixes identiques: via <code>2 .col-6</code> = <code>2 .col</code></h1>
+        <p>Le texte sera toujours sur deux colonnes quel que soit la résolution.</p>
+        <p>Ici on a utilisé 2 <code>.col-6</code> mais le résultat aurait été le même avec 2 <code>.col</code>.</p>
+        <div class="row">
+            <div class="col-6 border">
                 <h2>BlindCode</h2>
-                <div class="text-justify">
-                    <img class="img-fluid float-left" src="../Images/BlindCode.png" alt="Logo d'Eqla" />
-                    <p>Comme vous le savez peut-être, le secteur du numérique est porteur d’emploi et l’avenir s’annonce de plus en plus digital.</p>
-
-                    <p>Mais saviez-vous que toute une gamme de métiers du numérique est accessible aux personnes aveugles et malvoyantes ?</p>
-
-                    <p>Grâce à quelques adaptations et outils spécifiques, les personnes déficientes visuelles peuvent devenir développeur·euse web, spécialiste data, helpdesk informatique, consultant·e en accessibilité, etc.</p>
-
-                    <p>Ainsi, pour contribuer à l’inclusion de tous, Eqla propose en 2020, avec le soutien du Digital Belgium Skills Fund, de Bruxelles Formation et du Fonds Social Européen, une formation professionnelle innovante en Belgique nommée « BlindCode
-                        ».
-                    </p>
-
-                    <p>Elle s’adresse aux jeunes et aux adultes intéressés par le numérique, et souhaitant s’orienter vers le métier de développeur.se web et mobile, ou se préparer à poursuivre des études supérieures en informatique.</p>
-                </div>
+                <p class="text-justify blindcodeImg"></p>
             </div>
-            <div class="col-6">
+            <div class="col-6 border">
                 <h2>Lorem Ipsum</h2>
                 <img class="img-fluid float-right" src="../Images/loremipsum.jpg" alt="visage d'une femme formé par des caractères d'imprimerie." />
-                <p class="text-justify">
-                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de
-                    texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années
-                    1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
-                </p>
+                <p class="text-justify loremipsum"> </p>
             </div>
         </div>
 
-        <h1 class="text-center">4 colonnes: deux <code>.col-2</code> et deux <code>.col-4</code></h1>
+        <h1 class="text-center">4 colonnes fixes: deux <code>.col-2</code> et deux <code>.col-4</code></h1>
         <div class="row d-flex flex-wrap">
-            <div class="col-4">
+            <div class="col-4 border">
                 <h2><code>.col-4</code></h2>
-                <p class="text-justify">
-                    Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de
-                    texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années
-                    1960 grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
-                </p>
+                <p class="text-justify loremipsum"></p>
             </div>
-            <div class="col-2">
+            <div class="col-2 border border-left-0">
                 <h2><code>.col-2</code></h2>
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de
-                texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960
-                grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                <p class="loremipsum"></p>
             </div>
-            <div class="col-4">
+            <div class="col-4 border border-left-0">
                 <h2><code>.col-4</code></h2>
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de
-                texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960
-                grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                <p class="loremipsum"></p>
             </div>
-            <div class="col-2">
+            <div class="col-2 border border-left-0">
                 <h2><code>.col-2</code></h2>
-                Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux de
-                texte pour réaliser un livre spécimen de polices de texte. Il n'a pas fait que survivre cinq siècles, mais s'est aussi adapté à la bureautique informatique, sans que son contenu n'en soit modifié. Il a été popularisé dans les années 1960
-                grâce à la vente de feuilles Letraset contenant des passages du Lorem Ipsum, et, plus récemment, par son inclusion dans des applications de mise en page de texte, comme Aldus PageMaker.
+                <p class="loremipsum"></p>
             </div>
         </div>
-    </div>
+        <h1 class="text-center">2 colonnes identiques: <code>.col-sm</code></h1>
+        <p class="lead">Avec l'utilisation de <code>2 .col-sm</code>, les colonnes prendront la moitié de l'écran.</p>
+        <p class="lead">Sauf si la résolution est inférieure à <code>sm</code> dans ce cas, les colonnes seront sur deux lignes.</p>
+        <div class="row ">
+            <div class="col-sm border">
+                <h2>BlindCode</h2>
+                <p class="text-justify blindcode"></p>
+            </div>
+            <div class="col-sm border border-left-0">
+                <h2>Lorem Ipsum</h2>
+                <p class="text-justify loremipsum"> </p>
+            </div>
+        </div>
 
+        <h1><code>.col</code> et <code>.col-3</code></h1>
+        <div class="row">
+            <div class="col text-justify border">
+                Première colonne <code>.col</code>.
+            </div>
+            <div class="col-3 border border-left-0">
+                Deuxième colonne <code>.col-3</code>.
+            </div>
+        </div>
+
+        <h1><code>.col-9</code> et <code>.col-3</code></h1>
+        <p class="lead">Identique à <code>.col</code> et <code>.col-3</code></p>
+        <div class="row">
+            <div class="col-9 text-justify  border">
+                Première colonne <code>.col-9</code>.
+            </div>
+            <div class="col-3 border border-left-0">
+                Deuxième colonne <code>.col-3</code>.
+            </div>
+        </div>
+
+        <h1>Mixe du nombre de colonnes fixes et variables</h1>
+        <div class="row text-white">
+            <div class="col-12 col-md-4 text-justify bg-success">
+                Première colonne .col-12 .col-md4
+            </div>
+            <div class="col-6 col-md-4 text-justify bg-warning">
+                Deuxième colonne .col-6 .col-md-4
+            </div>
+            <div class="col-6 col-md-4 text-justify bg-danger">
+                Troisième colonne .col-6 .col-md-4
+            </div>
+        </div>
+        <hr/>
+        <p class="text-right font-italic">Johnny Piette</p>
+    </div>
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+    <script src="../js/txtSamples.js"></script>
 </body>
 
 </html>
