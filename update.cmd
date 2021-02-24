@@ -7,8 +7,8 @@ git add .
 git commit -a -m "Backup."
 git branch my-backup_%date%_%t%
 
-git reset --hard origin/master
-if %ERRORLEVEL% NEQ 0 echo Failed to "reset" Git's workingtree (%ERRORLEVEL%) & pause & exit /b %ERRORLEVEL%
+git fetch origin
+if %ERRORLEVEL% NEQ 0 echo Failed execute "fetch" command (%ERRORLEVEL%) & pause & exit /b %ERRORLEVEL%
 
 git reset --hard origin/master
 if %ERRORLEVEL% NEQ 0 echo Failed to "reset" Git's workingtree (%ERRORLEVEL%) & pause & exit /b %ERRORLEVEL%
