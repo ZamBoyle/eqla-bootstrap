@@ -1,5 +1,5 @@
-REM Johnny Piette & Matthieu Darfeuille
 @echo off
+REM Johnny Piette & Matthieu Darfeuille
 
 git reset --hard origin/master
 if %ERRORLEVEL% NEQ 0 echo Failed to "reset" Git's workingtree (%ERRORLEVEL%) & pause & exit /b %ERRORLEVEL%
