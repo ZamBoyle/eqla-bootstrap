@@ -2,7 +2,7 @@
 # Johnny Piette & Matthieu Darfeuille
 
 # Backup au cas où...
-dt=`date '+%d-%m_%Y_%H:%M'`
+dt=`date '+%d-%m_%Y_%Hh%M'`
 git add .
 git commit -a -m "Backup."
 git branch my-backup_$dt
