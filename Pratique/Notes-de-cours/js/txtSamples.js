@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
     /**
      * 
      * @param {string} target nom de l'element ou de la classe
-     * @param {string} content valeur à mettre dans l'innerHTML
+     * @param {string} innerHTML valeur à mettre dans l'innerHTML
      */
     function replaceInnertHTML(target, innerHTML) {
         document.querySelectorAll(target).forEach(function(x) {
