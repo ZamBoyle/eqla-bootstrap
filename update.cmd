@@ -2,7 +2,7 @@
 REM Johnny Piette & Matthieu Darfeuille
 
 REM Backup au cas où...
-for /F "tokens=1,2 delims=:" %%a in ("%time%") do set t=%%ah%%b
+for /F "tokens=1,2,3 delims=:, " %%a in ("%time%") do set t=%%ah%%b-%%c
 git add .
 git commit -a -m "Backup."
 git branch my-backup_%date%_%t%
