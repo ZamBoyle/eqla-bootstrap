@@ -65,7 +65,13 @@ Exercice n°6
 4. Ajoutez-y un h1 avec le texte suivant : Je suis un beau Jumbotron
 5. Ajoutez-y un paragraphe avec ce texte : Je sers à mettre en évidence une information.
 6. Enregistrez sous votre fichier avec le nom Exercice6.html
-
+Exercice n°7
+1. Ouvrez dans VsCode la page Template.html
+2. Allez à la ligne n°18.
+3. Ouvrez une balise p avec comme classe text-danger
+4. Ajouter un message pour les lecteurs d’écran : Danger
+5. Affichez « Cette action n’est pas réversible. »
+6. Fermez la balise p.
 
 
 
