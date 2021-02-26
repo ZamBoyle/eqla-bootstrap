@@ -46,7 +46,7 @@ Exercice n°4
 1. Ouvrez dans VsCode la page Template.html
 2. Allez à la ligne n°18.
 3. Dans un paragraphe, mettez ce texte en minuscules : « JE SUIS UN TEXTE EN MINUSCULES »
-4. Dans un paragraphe, mettez ce texte en majuscules : « je suis un texte en minuscules »
+4. Dans un paragraphe, mettez ce texte en majuscules : « je suis un texte en majuscules »
 5. Dans un paragraphe, placez à droite le texte : « Je suis placé à droite de l’écran »
 6. Dans un paragraphe, placez à droite le texte : « Je suis placé à droite de l’écran » si la résolution est d’au moins lg.
 7. Enregistrez sous votre fichier avec le nom Exercice4.html
