@@ -296,13 +296,14 @@ Exemple :
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/components/carousel/
 Bootstrap fournit nativement un composant visuel de diaporama très sympathique que l’on appelle le carrousel. Il est fréquent de le voir sur des pages webs. Il présente par exemple des promos qui défilent via des images, du texte avec un changement cyclique définissable.
 On peut y mettre des images, du texte, etc.
-Sa construction suit le schéma suivant :
+1. Construction du carousel Bootstrap
+Il suit le schéma suivant basé sur l’imbrication de plusieurs div.
 1. Un div contenant notre carrousel ayant les classes .carousel et .slide 
 Ce div doit avoir l’attribut suivant data-ride="carousel"
-2. Un second div inclus dans le premier avec la classe .carousel-inner
+2. Un div enfant inclus dans le premier avec la classe .carousel-inner
 3. Ensuite nous ajoutons des div pour le contenu (slide) à faire défiler. Chaque contenu est inclus dans un div ayant la classe .carousel-item. Notons qu’un des divs de slide doit impérativement avoir la classe .active. Sinon le carousel ne sera pas visible.
 Exemple :
-<div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+<div id="monCarousel" class="carousel slide" data-ride="carousel">
 <div class="carousel-inner">
 <div class="carousel-item active">
 <img src="Images/la.jpg" alt="Los Angeles, arrivée d'un groupe sur scène."> Los Angeles, pour <a href="">plus de photos</a>.
@@ -318,7 +319,41 @@ Exemple :
 On peut jouer sur la vitesse, en millisecondes, de défilement en ajoutant un attribut data-interval.
 Ce qui veut dire que notre div principal contenant le carousel devrait ressembler à ceci
 <div id="monCarousel" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">Par défaut il n’a pas de boutons de défilement mais on peut les ajouter.
-XI. La Grille de Bootstrap
+2. Ajouter des contrôles Précédent et Suivant
+Lors de l’utilisation du carousel Bootstrap, il est possible de définir les boutons « suivant » et « précédent ». Mais pour cela, il faut impérativement donner un id à notre carousel, sinon il ne sera pas possible d’ajouter ces boutons de contrôle.
+Bouton précédent
+1. Ajoutez un id avec comme valeur monCarousel au div ayant la classe "carousel".
+2. Positionnez-vous après la fermeture du div ayant la classe "carousel-inner".
+3. Ouvrez une balise a et définissez les attributs suivants :
+a. class=".carousel-control-prev"
+b. href="#monCarousel" (C’est l’id du carousel définit au point 1).
+c. role="button"
+d. data-slide="prev"
+4. Ajoutez <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+5. Fermez la balise a
+Bouton suivant
+1. Ouvrez une balise a et définissez les attributs suivants :
+a. class=".carousel-control-next"
+b. href="#monCarousel" (C’est l’id du carousel définit au point 1).
+c. role="button"
+d. data-slide="prev"
+2. Ajoutez <span class="carousel-control-next-icon" aria-hidden="true"></span>
+3. Fermez la balise a
+3. Contrôles accessibles
+Alors ce carousel est très sympa. Mais il manque d’accessibilité. En effet, si un lecteur d’écran passe sur les boutons Précédent ou Suivant, nous entendrons le lecteur d’écran dire : Bouton. Ce qui est peu clair.
+On peut l’améliorer en ajoutant la classe sr-only vue précédemment.
+Il suffit d’ajouter dans les deux balises a des contrôles un span ayant la classe sr-only.
+<span class="sr-only">Précédent</span>
+<span class="sr-only">Suivant</span>
+Exemple complet de contrôles accessibles
+            <a class="carousel-control-prev" href="#monCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#monCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>XI. La Grille de Bootstrap
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/layout/grid/
 Bootstrap propose un système de grille très pratique et responsive. Elle permet d’agencer des contenus sous formes de colonnes. 
 Cette grille est composée d’une ligne de 12 colonnes. On pourrait penser que c’est un tableau. Si on veut mais alors d’une seule ligne. Ce système de grille permet d’ajouter des éléments sous formes de colonnes.
@@ -391,6 +426,8 @@ Pour cela, vous aurez le html suivant
 <div class="col-6 col-md-4 text-justify bg-warning"></div>
 <div class="col-6 col-md-4 text-justify bg-danger"></div>
 </div>
+
+
 Expliquons-le petit à petit :
 - .col-12 col-md-4 : la colonne fera le 1/3 de l’écran si la résolution est supérieure ou égale à md. Dans le cas contraire, la colonne prendra toute la ligne (.col-12).
 - .col-6 col-md-4 : la seconde colonne fera le 1/3 (même raison). Dans le cas contraire, la colonne prendra la moitié de l’écran (.col-6).
@@ -455,7 +492,6 @@ Exemple :
 <button type="button" class="btn btn-outline-dark">Dark</button>
 <button type="button" class="btn btn-outline-link">Lien</button>
 </div>
-
 3. Boutons sur la balise <a>
 Rien ne nous empêche de mettre les classes des boutons sur la balise <a> pour avoir un bouton à la place d’un lien. Exemple : le bouton « Nouvelle Inscription ».
 Exemple :
@@ -479,10 +515,7 @@ Exemple :
 On le fait en utilisant la classe .active pour l’activer et .disabled pour le désactiver. Attention de ne pas penser que c’est sécurisé de mettre un bouton avec la classe .disabled. En effet, si vous pensez par exemple désactiver la vente d’un produit jusqu’à 20h00. Sur le frontend, mettre cette classe à .disabled est facilement modifiable avec des navigateurs comme Firefox/Chrome. Il faut en plus côté backend, empêcher la vente du produit tant qu’il n’est pas 20h00. Une règle d’or, ne jamais croire ce qu’on a reçu du frontend. Toujours tout vérifier côté backend ce que le frontend a envoyé.
 Exemple :
 <button type="button" class="btn btn-primary active">Active Primary</button>
-<button type="button" class="btn btn-primary disabled">Disabled Primary</button>
-
-
-XIV. Les tableaux
+<button type="button" class="btn btn-primary disabled">Disabled Primary</button>XIV. Les tableaux
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/content/tables/
 Bootstrap permet de styliser nos tableaux.
 1. Simple tableau Bootstrap
@@ -521,7 +554,6 @@ Exemple :
             </tbody>
         </table>
     </div> 
-
 2. Description du tableau
 Pour informer l’utilisateur du contenu du tableau, soit on met un titre clair ou une description à l’aide d’un titre et un paragraphe.
 On peut aussi utiliser la balise caption juste après la balise table. Nous aurons en bas à gauche du tableau la description du tableau.
@@ -565,7 +597,7 @@ Exemple :
 Pour avoir l’entête du tableau en noir ou en gris clair on utilise les classes .thead-dark ou .thead-light.
 Exemples : <thead class="thead-dark" > ou <thead class="thead-light" >
 4. Lignes en rayures de zèbre
-Pour une lecture efficace, on utilise souvent cette technique d’alterner deux couleurs, une ligne sur deux. Ca permet de plus facilement lire un tableau. Sinon on est vite « noyé » dans un tableau s’il n’applique pas cette technique.
+Pour une lecture efficace, on utilise souvent cette technique d’alterner deux couleurs, une ligne sur deux. Ça permet de plus facilement lire un tableau. Sinon on est vite « noyé » dans un tableau s’il n’applique pas cette technique.
 Pour alterner une ligne sur deux, en plus de la classe .table, on utilise la classe .table-striped sur la balise <table>.
 Exemple :
     <div class="container">
