@@ -28,7 +28,10 @@
             <li><a href="#ex5" class="text-decoration-none"> Exercice n°5 - Les images</a></li>
             <li><a href="#ex6" class="text-decoration-none"> Exercice n°6 - Le Jumbotron</a></li>
             <li><a href="#ex7" class="text-decoration-none"> Exercice n°7 - Lecteur d'écran</a></li>
-            <li><a href="#ex8" class="text-decoration-none"> Exercice n°8 - Le composant carousel</a></li>
+            <li><a href="#ex8" class="text-decoration-none"> Exercice n°8.1 - Le composant carousel</a></li>
+            <li><a href="#ex8.2" class="text-decoration-none"> Exercice n°8.2 - Le composant carousel - Le contrôle Précédent </a></li>
+            <li><a href="#ex8.3" class="text-decoration-none"> Exercice n°8.3 - Le composant carousel - Le contrôle Suivant</a></li>
+            <li><a href="#ex8.4" class="text-decoration-none"> Exercice n°8.4 - Le composant carousel - Les contrôles accessibles</a></li>
             <li><a href="#ex9" class="text-decoration-none"> Exercice n°9 - La grille Bootstrap</a></li>
             <li><a href="#ex10" class="text-decoration-none"> Exercice n°10 - Les couleurs</a></li>
             <li><a href="#ex11" class="text-decoration-none"> Exercice n°11 - Les boutons</a></li>
@@ -119,7 +122,7 @@
         </ol>
 
         <a name="ex8"></a>
-        <h2>Exercice n°8 - Le composant carousel</h2>
+        <h2>Exercice n°8.1 - Le composant carousel</h2>
         <ol>
             <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
             <li>Allez à la ligne n°18.</li>
@@ -132,6 +135,39 @@
             <li>Après le div précédent, ajoutez un <code>div class="carousel-item"</code> et y ajouter une image.</li>
         </ol>
 
+        <a name="ex8.2"></a>
+        <h2>Exercice n°8.2 - Le composant carousel - Le contrôle Précédent</h2>
+        <ol>
+            <li>Utilisez le précédent carousel</li>
+            <li>Ajoutez les contrôles</li>
+            <li>Ajoutez un <code>id</code> avec comme valeur monCarousel au div ayant la classe <code>carousel</code>.</li>
+            <li>Positionnez-vous après la fermeture du div ayant la classe <code>carousel-inner</code>.</li>
+            <li>Ouvrez une balise <code>a</code> et définissez les attributs suivants :
+                <ol>
+                    <li>class=".carousel-control-prev"</li>
+                    <li>href="#monCarousel" (C’est l’id du carousel définit au point 1)</li>
+                    <li>role="button"</li>
+                    <li>data-slide="prev"</li>
+                    <li>Ajoutez <code>&#x3C;span class=&#x22;carousel-control-prev-icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;</code></li>
+                    <li>Fermez la balise a</li>
+                </ol>
+            </li>
+        </ol>
+
+        <a name="ex8.3"></a>
+        <h2>Exercice n°8.3 - Le composant carousel - Le contrôle Suivant</h2>
+        <ol>
+            <li>Utilisez le précédent carousel</li>
+            <li>Suivez le méme principe que pour le contrôle Précédent</li>
+        </ol>
+
+        <a name="ex8.4"></a>
+        <h2>Exercice n°8.4 - Le composant carousel - Contrôles accessibles</h2>
+        <ol>
+            <li>Utilisez les contrôles de votre carousel</li>
+            <li>Ajoutez l'accessibilité avec la classe <code>.sr-only</code> (voir cours)</li>
+        </ol>
+
         <a name="ex9"></a>
         <h2>Exercice n°9 - La grille Bootstrap</h2>
         <ol>
@@ -141,7 +177,6 @@
             <li>Affichez quatre colonnes colonnes à taille fixe prenant toute la largeur.</li>
             <li>Affichez trois colonnes colonnes à taille fixe ne prenant pas toute la largeur.</li>
             <li>Affichez deux colonnes prenant la moitié de l'écran chacune si la taille de l'écran est lg. Sinon deux lignes seront créées et la taille sera pour l'une col-2 et l'autre col-3</li>
-            <li></li>
         </ol>
 
         <a name="ex10"></a>

@@ -27,6 +27,7 @@
         <li><a href="#ce5" class="text-decoration-none"> Exercice n°5 - Les images</a></li>
         <li><a href="#ce6" class="text-decoration-none"> Exercice n°6 - Le Jumbotron</a></li>
         <li><a href="#ce7" class="text-decoration-none"> Exercice n°7 - Lecteur d'écran</a></li>
+        <li><a href="#ce8" class="text-decoration-none"> Exercice n°8 - Le composant carousel</a></li>
     </ul>
     <hr/>
     <a name="ce2"></a>
@@ -115,6 +116,65 @@
     <p class="text-danger">
         <span class="sr-only">Danger</span>Cette action est n'est pas réversible.
     </p>
+
+    <a name="ce8"></a>
+    <h2>Exercice n°8</h2>
+    <h3>Code html
+        <a id="bce8" onclick="CopyToClipboard('ex8')" class="btn btn-primary" href="#bce8">Cliquer pour copier le code</a>
+    </h3>
+    <pre id="ex8" class="border bg-light">
+&#x3C;div id=&#x22;monCarousel&#x22; class=&#x22;carousel slide&#x22; data-ride=&#x22;carousel&#x22; data-interval=&#x22;2000&#x22;&#x3E;
+    &#x3C;div class=&#x22;carousel-inner&#x22;&#x3E;
+        &#x3C;div class=&#x22;carousel-inner&#x22;&#x3E;
+            &#x3C;div class=&#x22;carousel-item active&#x22;&#x3E;
+                &#x3C;img src=&#x22;./Images/cheval.jpg&#x22; class=&#x22;img-fluid&#x22;&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
+                &#x3C;img src=&#x22;./Images/lapin.jpg&#x22; class=&#x22;img-fluid&#x22;&#x3E;
+            &#x3C;/div&#x3E;
+            &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
+                &#x3C;img src=&#x22;./Images/lion.jpg&#x22; class=&#x22;img-fluid&#x22;&#x3E;
+            &#x3C;/div&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!-- Contr&#xF4;les Pr&#xE9;c&#xE9;dent et Suivant --&#x3E;
+    &#x3C;a class=&#x22;carousel-control-prev&#x22; href=&#x22;#monCarousel&#x22; role=&#x22;button&#x22; data-slide=&#x22;prev&#x22;&#x3E;
+        &#x3C;span class=&#x22;carousel-control-prev-icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Pr&#xE9;c&#xE9;dent&#x3C;/span&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;a class=&#x22;carousel-control-next&#x22; href=&#x22;#monCarousel&#x22; role=&#x22;button&#x22; data-slide=&#x22;next&#x22;&#x3E;
+        &#x3C;span class=&#x22;carousel-control-next-icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Suivant&#x3C;/span&#x3E;
+    &#x3C;/a&#x3E;
+&#x3C;/div&#x3E;    
+    </pre>
+    <h3>Résultat</h3>
+    <div class="container">
+        <div id="monCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./Images/cheval.jpg" class="img-fluid">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Images/lapin.jpg" class="img-fluid">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./Images/lion.jpg" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+            <!-- Contrôles Précédent et Suivant -->
+            <a class="carousel-control-prev" href="#monCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#monCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
+        </div>
+    </div>
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="/bootstrap/js/jquery-3.5.1.slim.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
