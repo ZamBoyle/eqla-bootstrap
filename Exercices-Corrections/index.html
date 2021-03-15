@@ -10,6 +10,7 @@
 
     <!-- Bootstrap icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./styles/site.css">
     <title>Corrigé des exercices</title>
 </head>
 
@@ -27,7 +28,8 @@
         <li><a href="#ce5" class="text-decoration-none"> Exercice n°5 - Les images</a></li>
         <li><a href="#ce6" class="text-decoration-none"> Exercice n°6 - Le Jumbotron</a></li>
         <li><a href="#ce7" class="text-decoration-none"> Exercice n°7 - Lecteur d'écran</a></li>
-        <li><a href="#ce8" class="text-decoration-none"> Exercice n°8 - Le composant carousel</a></li>
+        <li><a href="#ce8" class="text-decoration-none"> Exercices n°8.1 à 8.4 - Le composant carousel</a></li>
+        <li><a href="#ce8.5" class="text-decoration-none"> Exercices n°8.5 - Le composant carousel: Les contrôles pause/play</a></li>
     </ul>
     <hr/>
     <a name="ce2"></a>
@@ -35,7 +37,7 @@
     <h3>Code html
         <a id="bce2" onclick="CopyToClipboard('ex2')" class="btn btn-primary" href="#bce2">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex2" class="border bg-light">
+    <pre id="ex2">
 &#x3C;div class=&#x22;container&#x22;&#x3E;
     &#x3C;h1&#x3E;Hello, from Bootstrap&#x3C;/h1&#x3E;
 &#x3C;/div&#x3E;</pre>
@@ -48,7 +50,7 @@
     <h3>Code html
         <a id="bce3" onclick="CopyToClipboard('ex3')" class="btn btn-primary" href="#bce3">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex3" class="border bg-light">
+    <pre id="ex3">
 &#x3C;div class=&#x22;container&#x22;&#x3E;
     &#x3C;h1 class=&#x22;text-center&#x22;&#x3E;Hello World, from Bootstrap&#x3C;/h1&#x3E;
 &#x3C;/div&#x3E;</pre>
@@ -61,7 +63,7 @@
     <h3>Code html
         <a id="bce4" onclick="CopyToClipboard('ex4')" class="btn btn-primary" href="#bce4">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex4" class="border bg-light">
+    <pre id="ex4">
 &#x3C;p class=&#x22;text-lowercase&#x22;&#x3E;JE SUIS UN TEXTE EN MINUSCULES.&#x3C;/p&#x3E;
 &#x3C;p class=&#x22;text-uppercase&#x22;&#x3E;je suis un texte en majuscules.&#x3C;/p&#x3E;
 &#x3C;p class=&#x22;text-right&#x22;&#x3E;Je suis plac&#xE9; &#xE0; droite de l&#x2019;&#xE9;cran.&#x3C;/p&#x3E;
@@ -78,7 +80,7 @@
     <h3>Code html
         <a id="bce5" onclick="CopyToClipboard('ex5')" class="btn btn-primary" href="#bce5">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex5" class="border bg-light">
+    <pre id="ex5">
 &#x3C;img src=&#x22;Images/mario.jpg&#x22; alt=&#x22;Image de Mario sur Yoshi&#x22;/&#x3E;
 &#x3C;img src=&#x22;Images/mario.jpg&#x22; class=&#x22;img-fluid&#x22; alt=&#x22;Image de Mario sur Yoshi&#x22; /&#x3E;
 &#x3C;img src=&#x22;Images/mario.jpg&#x22; class=&#x22;img-fluid img-thumbnail&#x22;alt=&#x22;Image de Mario sur Yoshi&#x22; /&#x3E;</pre id="ex5" class="border bg-light">
@@ -92,7 +94,7 @@
     <h3>Code html
         <a id="bce6" onclick="CopyToClipboard('ex6')" class="btn btn-primary" href="#bce6">Cliquer pour copier le code</a>
     </h3>    
-    <pre id="ex6" class="border bg-light">
+    <pre id="ex6">
 &#x3C;div class=&#x22;jumbotron jumbotron-fluid&#x22;&#x3E;
     &#x3C;h1&#x3E;Je suis un beau Jumbotron&#x3C;/h1&#x3E;
     &#x3C;p&#x3E;Je sers &#xE0; mettre en &#xE9;vidence une information.&#x3C;/p&#x3E;
@@ -108,7 +110,7 @@
     <h3>Code html
         <a id="bce7" onclick="CopyToClipboard('ex7')" class="btn btn-primary" href="#bce7">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex7" class="border bg-light">
+    <pre id="ex7">
 &#x3C;p class=&#x22;text-danger&#x22;&#x3E;
     &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Danger&#x3C;/span&#x3E;Cette action est n&#x27;est pas r&#xE9;versible.
 &#x3C;/p&#x3E;</pre>
@@ -118,23 +120,21 @@
     </p>
 
     <a name="ce8"></a>
-    <h2>Exercice n°8</h2>
+    <h2>Exercice n°8.1 à 8.4</h2>
     <h3>Code html
         <a id="bce8" onclick="CopyToClipboard('ex8')" class="btn btn-primary" href="#bce8">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex8" class="border bg-light">
+    <pre id="ex8">
 &#x3C;div id=&#x22;monCarousel&#x22; class=&#x22;carousel slide&#x22; data-ride=&#x22;carousel&#x22; data-interval=&#x22;2000&#x22;&#x3E;
     &#x3C;div class=&#x22;carousel-inner&#x22;&#x3E;
-        &#x3C;div class=&#x22;carousel-inner&#x22;&#x3E;
-            &#x3C;div class=&#x22;carousel-item active&#x22;&#x3E;
-                &#x3C;img src=&#x22;./Images/cheval.jpg&#x22; class=&#x22;img-fluid&#x22;&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
-                &#x3C;img src=&#x22;./Images/lapin.jpg&#x22; class=&#x22;img-fluid&#x22;&#x3E;
-            &#x3C;/div&#x3E;
-            &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
-                &#x3C;img src=&#x22;./Images/lion.jpg&#x22; class=&#x22;img-fluid&#x22;&#x3E;
-            &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;carousel-item active&#x22;&#x3E;
+            &#x3C;img src=&#x22;./Images/cheval.jpg&#x22; class=&#x22;img-fluid&#x22; aria-label=&#x22;Image d&#x27;un cheval&#x22;&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
+            &#x3C;img src=&#x22;./Images/lapin.jpg&#x22; class=&#x22;img-fluid&#x22; aria-label=&#x22;Image d&#x27;un lapin&#x22;&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
+            &#x3C;img src=&#x22;./Images/lion.jpg&#x22; class=&#x22;img-fluid&#x22; aria-label=&#x22;Image d&#x27;un lion&#x22;&#x3E;
         &#x3C;/div&#x3E;
     &#x3C;/div&#x3E;
     &#x3C;!-- Contr&#xF4;les Pr&#xE9;c&#xE9;dent et Suivant --&#x3E;
@@ -146,22 +146,120 @@
         &#x3C;span class=&#x22;carousel-control-next-icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
         &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Suivant&#x3C;/span&#x3E;
     &#x3C;/a&#x3E;
-&#x3C;/div&#x3E;    
+&#x3C;/div&#x3E;
+    </pre>
+    <h3>Résultat</h3>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./Images/cheval.jpg" class="img-fluid" aria-label="Image d'un cheval">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Images/lapin.jpg" class="img-fluid" aria-label="Image d'un lapin">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Images/lion.jpg" class="img-fluid" aria-label="Image d'un lion">
+                </div>
+            </div>
+            <!-- Contrôles Précédent et Suivant -->
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Précédent</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Suivant</span>
+            </a>
+        </div>
+    </div>
+    <a name="ce8.5"></a>
+    <h2>Exercice 8.5 - Les contrôles pause/play</h2>
+    <h3>Code html
+        <a id="bce8.5" onclick="CopyToClipboard('ex8.5-1')" class="btn btn-primary" href="#bce8.5">Cliquer pour copier le code</a>
+    </h3>
+    <pre id="ex8.5-1">
+&#x3C;div id=&#x22;monCarousel&#x22; class=&#x22;carousel slide&#x22; data-ride=&#x22;carousel&#x22; data-interval=&#x22;2000&#x22;&#x3E;
+    &#x3C;div class=&#x22;carousel-inner&#x22;&#x3E;
+        &#x3C;div class=&#x22;carousel-item active&#x22;&#x3E;
+            &#x3C;img src=&#x22;./Images/cheval.jpg&#x22; class=&#x22;img-fluid&#x22; aria-label=&#x22;Image d&#x27;un cheval&#x22;&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
+            &#x3C;img src=&#x22;./Images/lapin.jpg&#x22; class=&#x22;img-fluid&#x22; aria-label=&#x22;Image d&#x27;un lapin&#x22;&#x3E;
+        &#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;carousel-item&#x22;&#x3E;
+            &#x3C;img src=&#x22;./Images/lion.jpg&#x22; class=&#x22;img-fluid&#x22; aria-label=&#x22;Image d&#x27;un lion&#x22;&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;!-- Contr&#xF4;les Pr&#xE9;c&#xE9;dent et Suivant --&#x3E;
+    &#x3C;a class=&#x22;carousel-control-prev&#x22; href=&#x22;#monCarousel&#x22; role=&#x22;button&#x22; data-slide=&#x22;prev&#x22;&#x3E;
+        &#x3C;span class=&#x22;carousel-control-prev-icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Pr&#xE9;c&#xE9;dent&#x3C;/span&#x3E;
+    &#x3C;/a&#x3E;
+    &#x3C;a class=&#x22;carousel-control-next&#x22; href=&#x22;#monCarousel&#x22; role=&#x22;button&#x22; data-slide=&#x22;next&#x22;&#x3E;
+        &#x3C;span class=&#x22;carousel-control-next-icon&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;span class=&#x22;sr-only&#x22;&#x3E;Suivant&#x3C;/span&#x3E;
+    &#x3C;/a&#x3E;
+&#x3C;/div&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-default btn-play&#x22; carousel=&#x22;#monCarousel&#x22; aria-label=&#x22;Activer le caroussel&#x22; style=&#x22;display: none;&#x22; title=&#x22;Activer le caroussel&#x22;&#x3E;
+    &#x3C;span class=&#x22;bi bi-play-btn&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-default btn-pause&#x22; carousel=&#x22;#monCarousel&#x22; aria-label=&#x22;Mettre en pause le caroussel&#x22; title=&#x22;Mettre en pause le caroussel&#x22;&#x3E;
+    &#x3C;span class=&#x22;bi bi-pause-btn&#x22; aria-hidden=&#x22;true&#x22;&#x3E;&#x3C;/span&#x3E;
+&#x3C;/button&#x3E;
+    </pre>
+    <h3>Code Javascript en jQuery du fichier carousel.js
+        <a id="bce8.5-2" onclick="CopyToClipboard('ex8.5-2')" class="btn btn-primary" href="#bce8.5-2">Cliquer pour copier le code</a>
+    </h3>
+    <pre id="#ex8.5-2">
+playButton = $(".btn-play");
+pauseButton = $(".btn-pause");
+carouselID = playButton.attr("carousel");
+
+playButton.click(function() {
+    pauseButton.show();
+    playButton.hide();
+    $(carouselID).carousel('cycle');
+});
+
+pauseButton.click(function() {
+    playButton.show();
+    pauseButton.hide();
+    $(carouselID).carousel('pause');
+});
+    </pre>
+    <h3>Code Javascript en pur Javascript excepté pour mettre en pause/redémarrer le caroussel
+        <a id="bce8.5-3" onclick="CopyToClipboard('ex8.5-3')" class="btn btn-primary" href="#bce8.5-3">Cliquer pour copier le code</a>
+    </h3>
+    <pre id="ex8.5-3">
+playButton = document.querySelector(".btn-play");
+pauseButton = document.querySelector(".btn-pause");
+carouselID = playButton.getAttribute("carousel")
+
+playButton.addEventListener('click', function() {
+    pauseButton.style.display = 'block';
+    playButton.style.display = 'none';
+    $(carouselID).carousel('cycle'); //jQuery
+}, false);
+
+pauseButton.addEventListener('click', function() {
+    playButton.style.display = 'block';
+    pauseButton.style.display = 'none';
+    $(carouselID).carousel('pause'); //jQuery
+}, false);
     </pre>
     <h3>Résultat</h3>
     <div class="container">
         <div id="monCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
             <div class="carousel-inner">
-                <div class="carousel-inner">
-                    <div class="carousel-item active">
-                        <img src="./Images/cheval.jpg" class="img-fluid">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./Images/lapin.jpg" class="img-fluid">
-                    </div>
-                    <div class="carousel-item">
-                        <img src="./Images/lion.jpg" class="img-fluid">
-                    </div>
+                <div class="carousel-item active">
+                    <img src="./Images/cheval.jpg" class="img-fluid" aria-label="Image d'un cheval">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Images/lapin.jpg" class="img-fluid" aria-label="Image d'un lapin">
+                </div>
+                <div class="carousel-item">
+                    <img src="./Images/lion.jpg" class="img-fluid" aria-label="Image d'un lion">
                 </div>
             </div>
             <!-- Contrôles Précédent et Suivant -->
@@ -174,11 +272,20 @@
                 <span class="sr-only">Suivant</span>
             </a>
         </div>
+        <button type="button" class="btn btn-default btn-play" carousel="#monCarousel" aria-label="Activer le caroussel" style="display: none;" title="Activer le caroussel">
+            <span class="bi bi-play-btn" aria-hidden="true"></span>
+        </button>
+        <button type="button" class="btn btn-default btn-pause" carousel="#monCarousel" aria-label="Mettre en pause le caroussel" title="Mettre en pause le caroussel">
+            <span class="bi bi-pause-btn" aria-hidden="true"></span>
+        </button>
     </div>
+
+    <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="/bootstrap/js/jquery-3.5.1.slim.min.js"></script>
     <script src="/bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="/bootstrap/js/site.js"></script>
+    <script src="./js/carousel.js"></script>
 </body>
 
 </html>
