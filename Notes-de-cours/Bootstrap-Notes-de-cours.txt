@@ -19,54 +19,70 @@ Johnny Piette
 
 
 Table des matières
-I.	A propos de ce cours	3
-II.	Prérequis	3
-III.	Présentation de Bootstrap	3
-1.	Brainstorming : Qu’est-ce que Bootstrap pour vous ?	3
-2.	Brève présentation de Bootstrap	3
-3.	Pourquoi utiliser Bootstrap ?	4
-4.	Bootstrap 4.x et Bootstrap 5	4
-5.	Comment Utiliser Bootstrap ?	4
-IV.	Intégration des Fichiers Bootstrap	5
-V.	Fonctionnement de Bootstrap	5
-VI.	Manipulation du texte	8
-1.	Alignement du texte	8
-2.	Alignement du texte fonction de l’écran	8
-3.	Les classes de mise en forme	8
-4.	Transformation du texte	9
-VII.	Les images	9
-1.	Responsive	9
-2.	Thumbnail	9
-3.	Alignement	9
-VIII.	Le composant Jumbotron	10
-IX.	Lecteur d’écran	11
-X.	Le Composant Carrousel	11
-XI.	La Grille de Bootstrap	12
-1.	Classes pour un nombre fixe de colonnes :	12
-2.	Classes pour un nombre de colonnes variables en fonction de la résolution	13
-3.	Mixe entre classes à nombre de colonnes fixes et variables	14
-XII.	Les couleurs	15
-XIII.	Les boutons	16
-1.	Boutons avec une couleur de fond	16
-2.	Boutons avec bordures	16
-3.	Boutons sur la balise <a>	17
-4.	La taille des boutons	17
-5.	Activer/Désactiver un bouton	17
-XIV.	Les tableaux	18
-1.	Simple tableau Bootstrap	18
-2.	Entêtes claires ou sombres	19
-3.	Lignes en rayures de zèbre	19
-4.	Tableau à bordures ou sans bordure	19
-5.	Effet lors du passage de la souris sur une ligne	19
-6.	Couleurs des lignes	19
-7.	Tableaux responsives	19
-XV.	Les formulaires	20
-XVI.	Les displays	20
-XVII.	Les navs	20
-XVIII.	Les navbars	20
-XIX.	Classes d’espacement	20
-1.	Les marges	20
-2.	Les paddings	21
+I.	A propos de ce cours	4
+II.	Prérequis	4
+III.	Présentation de Bootstrap	4
+1.	Brainstorming : Qu’est-ce que Bootstrap pour vous ?	4
+2.	Brève présentation de Bootstrap	4
+3.	Pourquoi utiliser Bootstrap ?	5
+4.	Bootstrap 4.x et Bootstrap 5	5
+5.	Comment Utiliser Bootstrap ?	5
+IV.	Intégration des Fichiers Bootstrap	6
+V.	Fonctionnement de Bootstrap	6
+VI.	Manipulation du texte	9
+1.	Alignement du texte	9
+2.	Alignement du texte fonction de l’écran	9
+3.	Les classes de mise en forme	9
+4.	Transformation du texte	10
+VII.	Les images	10
+1.	Responsive	10
+2.	Thumbnail	10
+3.	Alignement	10
+VIII.	Le composant Jumbotron	11
+IX.	Lecteur d’écran	12
+X.	Le Composant Carousel	12
+1.	Construction du carousel Bootstrap	12
+2.	Ajouter des contrôles Précédent et Suivant	13
+Bouton précédent	13
+Bouton suivant	13
+3.	Contrôles accessibles	14
+Exemple complet de contrôles accessibles	14
+XI.	La Grille de Bootstrap	14
+1.	Classes pour un nombre fixe de colonnes :	14
+2.	Classes pour un nombre de colonnes variables en fonction de la résolution	15
+3.	Mixe entre classes à nombre de colonnes fixes et variables	16
+XII.	Les couleurs	17
+XIII.	Les boutons	18
+1.	Boutons avec une couleur de fond	18
+2.	Boutons avec bordures	18
+3.	Boutons sur la balise <a>	19
+4.	La taille des boutons	19
+5.	Activer/Désactiver un bouton	19
+XIV.	Les tableaux	20
+1.	Simple tableau Bootstrap	20
+2.	Description du tableau	21
+3.	Entêtes clairs ou sombres	22
+4.	Lignes en rayures de zèbre	22
+5.	Tableau à bordures ou sans bordure	23
+6.	Effet lors du passage de la souris sur une ligne	23
+7.	Couleurs des lignes	23
+8.	Tableaux adaptables	23
+XV.	Les formulaires	24
+1.	Classes form-group et form-control	24
+2.	Classe .form-control-file	25
+3.	Attribut readonly	25
+4.	Attribut readonly et la classe .form-control-plaintext	25
+XVI.	Les displays	26
+XVII.	Les navs	26
+XVIII.	Les navbars	26
+XIX.	Classes d’espacement	26
+1.	Les marges	26
+a.	Soit une classe du type .m{côtés}-{taille}.	26
+b.	Soit une classe du type .m{côtés}-{media}-{taille}	27
+2.	Les paddings	27
+XX.	Les bordures	27
+XXI. Les barres de progression	27
+XXI.	Les fenêtres modales	27
 
 
 
@@ -432,7 +448,7 @@ Expliquons-le petit à petit :
 - .col-12 col-md-4 : la colonne fera le 1/3 de l’écran si la résolution est supérieure ou égale à md. Dans le cas contraire, la colonne prendra toute la ligne (.col-12).
 - .col-6 col-md-4 : la seconde colonne fera le 1/3 (même raison). Dans le cas contraire, la colonne prendra la moitié de l’écran (.col-6).
 - .col-6 col-md-4 : idem que précédemment mais sera à côté de la colonne précédente si résolution inférieure à md.
-Donc si la résolution est > = md, on aura 3 colonnes identiques (.col-md-4). Dans le cas contraire, on aura une colonne qui prendra toute une ligne (.col-12)>. Et sur une autre ligne, nous aurons deux colonnes identiques (.col-6) qui prendront toute la ligne.
+Donc si la résolution est > = md, on aura 3 colonnes identiques (.col-md-4). Dans le cas contraire, on aura une colonne qui prendra toute une ligne (.col-12). Et sur une autre ligne, nous aurons deux colonnes identiques (.col-6) qui prendront toute la ligne.
 XII. Les couleurs
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/utilities/colors/
 Bootstrap dispose de plusieurs classes pour les couleurs. Aux classes .bg-* (pour le background d’un élément) et aux classes .text-* on ajoute un des suffixes suivants :
@@ -512,7 +528,7 @@ Exemple :
 <button type="button" class="btn btn-outline-warning btn-lg btn-block">Bouton avec bordures de type block</button>
 </div>
 5. Activer/Désactiver un bouton
-On le fait en utilisant la classe .active pour l’activer et .disabled pour le désactiver. Attention de ne pas penser que c’est sécurisé de mettre un bouton avec la classe .disabled. En effet, si vous pensez par exemple désactiver la vente d’un produit jusqu’à 20h00. Sur le frontend, mettre cette classe à .disabled est facilement modifiable avec des navigateurs comme Firefox/Chrome. Il faut en plus côté backend, empêcher la vente du produit tant qu’il n’est pas 20h00. Une règle d’or, ne jamais croire ce qu’on a reçu du frontend. Toujours tout vérifier côté backend ce que le frontend a envoyé.
+On le fait en utilisant la classe .active pour l’activer et .disabled pour le désactiver. Attention de ne pas penser que c’est sécurisé de mettre un bouton avec la classe .disabled. En effet, si vous pensez par exemple désactiver la vente d’un produit jusqu’à 20h00. Sur le frontend, mettre cette classe à .disabled est facilement modifiable avec des navigateurs comme Firefox/Chrome. Il faut en plus côté backend, empêcher la vente du produit tant qu’il n’est pas 20h00. 
 Exemple :
 <button type="button" class="btn btn-primary active">Active Primary</button>
 <button type="button" class="btn btn-primary disabled">Disabled Primary</button>XIV. Les tableaux
@@ -652,19 +668,64 @@ Nous allons pouvoir utiliser les couleurs contextuelles de Bootstrap pour change
 - .table-light ;
 - .table-dark.
 8. Tableaux adaptables
-Si dans un tableau vous avez vraiment besoin d’afficher tous les colonnes quel que soit le média, il existe une classe .table-responsive qui va ajouter une barre une défilement horizontale.
-
-
-
-
-
-
+Si dans un tableau vous avez vraiment besoin d’afficher tous les colonnes quel que soit le média, il existe une classe .table-responsive qui va ajouter une barre une défilement horizontale. Ce n’est pas super génial en termes de présentation mais au moins le tableau ne sort pas de l’écran…
 
 
 XV. Les formulaires
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/components/forms/
-Bootstrap fournit un ensemble de classes qui permettent de rendre un formulaire beaucoup joli visuellement. De base, les formulaires html sont assez austères. Pour commencer, il faut bien entendu que le formulaire soit inclus dans la balise « form ».
-La classe .form-group
+Bootstrap fournit un ensemble de classes qui permettent de rendre un formulaire beaucoup plus joli visuellement. De base, les formulaires html sont assez austères.
+Pour utiliser les classes que nous allons voir, il faut bien entendu utiliser la balise « form » pour nos formulaires.
+1. Classes form-group et form-control
+La classe .form-group est utilisée pour grouper le contrôle du formulaire avec sa description.
+Les éléments <input>, <select> et <textarea> sont stylisés via la classe .form-control. Ce sont des contrôles dont les bords sont arrondis, grands et prennent toute la largeur du conteneur.
+Avant ces contrôles, on ajoute sa description via la balise <label> avec l’attribut for= "#ControleADecrire". 
+L'élément HTML <label> représente une légende pour un objet d'une interface utilisateur. Il peut être associé à un contrôle en utilisant l'attribut for ou en plaçant l'élément du contrôle à l'intérieur de l'élément <label>. Un tel contrôle est appelé contrôle étiqueté par l'élément <label>.
+Exemple :
+<form>
+    < !-- Premier form-group -->
+    <div class="form-group">
+        <label for="exempleInputEmail">Adresse Email</label>
+        <input type="email" class="form-control" id="exempleInputEmail" aria-describedby="emailHelp" placeholder="Entrer un email">
+        <small id="emailHelp" class="form-text text-muted">Nous ne partagerons jamais votre email avec qui que ce soit.</small>
+    </div>
+
+    < !-- Deuxième form-group -->
+    <div class="form-group">
+        <label for="exempleInputPassword">Password</label>
+        <input type="password" class="form-control" id=" exempleInputPassword " placeholder="Password">
+    </div>
+
+    < !-- Troisième form-group -->
+    <div class="form-check">
+        <input type="checkbox" class="form-check-input" id="exempleCheck">
+        <label class="form-check-label" for="exempleCheck">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Soumettre</button>
+</form>Rappelons que l’attribut placeholder permet d’afficher un texte dans un champ du formulaire. Exemple : « Entrer un email ». Ce message sera affiché tant que rien n’est indiqué dans le champ du formulaire.
+Ensuite, il est important de bien spécifier le type. En effet, ce type permettra d’être intercepté en cas de mauvais type. Exemple le type email qui testera un peu la validité d’un email. 
+L’attribut required indique au formulaire que ce champ est nécessaire et ne peut valider le formulaire tant que ce champ est vide. Attention qu’il ne faut pas croire aveuglément un formulaire reçu côté back-end. Normalement les mêmes règles de validations doivent être de rigueur côté serveur. Une règle : « Ne jamais croire ce que nous recevons du front-end. On reteste les données côté back-end. »
+2. Classe .form-control-file
+Pour le contrôle d’envoi de fichier on ajoute simplement cette classe au contrôle.
+Exemple :
+<div class="form-group">
+    <label for="exempleFormControlFile">Example file input</label>
+    <input type="file" class="form-control-file" id="exempleFormControlFile">
+</div>
+3. Attribut readonly
+Quand un élément comprend l’attribut readonly, le contrôle du formulaire sera désactivé et on ne saura pas le cliquer ou y écrire quelque chose. Le contrôle est juste en lecture seule.
+Le contrôle sera en gris foncé avec son texte prédéfini. Exemple, dans un formulaire si on connait déjà le nom d’utilisateur et qu’il ne changera pas, on peut le préremplir et mettre l’attribut readonly.
+Exemple :
+<input id="username"  class="form-control" type="text" placeholder="mcfly" readonly>
+4. Attribut readonly et la classe .form-control-plaintext
+Ici le comportement sera identique : on ne saura pas interagir. Cependant la classe .form-control-plaintext supprime le bord du contrôle input. Donnant l’impression que c’est un simple texte.
+Exemple :
+<input type="text" readonly class="form-control-plaintext" id="staticEmail" value="johnny.piette@gmail.com">
+
+
+
+
+
+
 
 
 XVI. Les displays
@@ -685,6 +746,8 @@ Dans Bootstrap, nous avons des classes qui permettent d’ajouter des paddings o
 Ces classes ont deux formats :
 a. Soit une classe du type .m{côtés}-{taille}.
 La taille varie de 0 à 5 (0 = 0rem, 1=0,25 rem,  2 = 0,5 rem, 3=1rem, 4 = 1,5 rem, 5 =  3 rem)
+0,25 rem = 0,25 * la variable SASS $spacer qui est définie par défaut à 1rem).
+« côtés » peut prendre les valeurs suivantes : rien, t (top), b(bottom), l (lef), r (right), x (gauche et droite), y (haut et bas)
 m-* : ajoutera une marge aux 4 côtés.
 mt-* : ajoutera une marge en haut.
 mb-* : ajoutera une marge en bas.
@@ -693,23 +756,20 @@ mr-* : ajoutera une marge à droite.
 mx-* : ajoutera une marge à gauche et à droite.
 my-* : ajoutera une marge en haut et en bas.
 b. Soit une classe du type .m{côtés}-{media}-{taille}
-« Côtés » peut prendre une des valeurs suivantes : sm, md, lg, xl. C’est donc conditionné en fonction de la taille de l’écran du périphérique. 
-m
-
-
+« media » peut prendre une des valeurs suivantes : sm, md, lg, xl. C’est donc conditionné en fonction de la taille de l’écran du périphérique. 
+Exemples : m-sm-7, mx-lg-5, etc.
 2. Les paddings
-
-p-*
-pt-*
-pb-* 
-pl-*
-pr-*
-px-*
-py-*
-Les fenêtres modales
-Les alertes
+Même principe que pour les marges. 
+Donc on pourra avoir deux formes : .p{côtés}-{taille} et p{côtés}-{media}-{taille}.
+XX. Les bordures
 
 
+
+
+XXI. Les barres de progression
+
+
+XXI. Les fenêtres modales
 
 
 

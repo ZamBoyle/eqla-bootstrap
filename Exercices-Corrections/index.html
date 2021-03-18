@@ -211,9 +211,9 @@
 &#x3C;/button&#x3E;
     </pre>
     <h3>Code Javascript en jQuery
-        <a id="bce8.5-2" onclick="CopyToClipboard('ex8.5-2')" class="btn btn-primary" href="#bce8.5-2">Cliquer pour copier le code</a>
+        <a id="bce8.5-2" onclick="CopyToClipboard('ex8-5-2')" class="btn btn-primary" href="#bce8.5-2">Cliquer pour copier le code</a>
     </h3>
-    <pre id="#ex8.5-2">
+    <pre id="ex8-5-2">
 playButton = $(".btn-play");
 pauseButton = $(".btn-pause");
 carouselID = playButton.attr("carousel");
@@ -231,9 +231,9 @@ pauseButton.click(function() {
 });
     </pre>
     <h3>Code Javascript en pur Javascript excepté pour mettre en pause/redémarrer le caroussel
-        <a id="bce8.5-3" onclick="CopyToClipboard('ex8.5-3')" class="btn btn-primary" href="#bce8.5-3">Cliquer pour copier le code</a>
+        <a id="bce8.5-3" onclick="CopyToClipboard('ex8-5-3')" class="btn btn-primary" href="#bce8.5-3">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex8.5-3">
+    <pre id="ex8-5-3">
 playButton = document.querySelector(".btn-play");
 pauseButton = document.querySelector(".btn-pause");
 carouselID = playButton.getAttribute("carousel")
@@ -286,11 +286,47 @@ pauseButton.addEventListener('click', function() {
     <a name="ce9"></a>
     <h2>Exercice n°9 - La grille Bootstrap</h2>
     <h3>Code html
-        <a id="bce8" onclick="CopyToClipboard('ex8')" class="btn btn-primary" href="#bce8">Cliquer pour copier le code</a>
+        <a id="bce9" onclick="CopyToClipboard('ex9')" class="btn btn-primary" href="#bce9">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex8">
-    </pre>
-    <div class="container"></div>
+    <pre id="ex9">
+&#x3C;div class=&#x22;container&#x22;&#x3E;
+    &#x3C;div class=&#x22;row border&#x22;&#x3E;
+        &#x3C;div class=&#x22;col-3 border-right&#x22;&#x3E;Je suis une colonne de taille col-3.&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;col-3 border-right&#x22;&#x3E;Je suis une colonne de taille col-3.&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;col-3 border-right&#x22;&#x3E;Je suis une colonne de taille col-3.&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;col-3&#x22;&#x3E;Je suis une colonne de taille col-3.&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;br/&#x3E;
+    &#x3C;div class=&#x22;row border&#x22;&#x3E;
+        &#x3C;div class=&#x22;col-2 border-right&#x22;&#x3E;Je suis une colonne de taille col-2.&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;col-4 border-right&#x22;&#x3E;Je suis une colonne de taille col-4.&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;col-3 border-right&#x22;&#x3E;Je suis une colonne de taille col-3.&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+    &#x3C;br/&#x3E;
+    &#x3C;div class=&#x22;row&#x22;&#x3E;
+        &#x3C;div class=&#x22;col-lg-6 col-md-2&#x22;&#x3E;Je suis une colonne de taille col-lg-6 col-md-2.&#x3C;/div&#x3E;
+        &#x3C;div class=&#x22;col-lg-6 col-md-3&#x22;&#x3E;Je suis une colonne de taille col-lg-6 col-md-3.&#x3C;/div&#x3E;
+    &#x3C;/div&#x3E;
+&#x3C;/div&#x3E;</pre>
+    <h3>Résultat</h3>
+    <div class="container">
+        <div class="row border">
+            <div class="col-3 border-right">Je suis une colonne de taille col-3.</div>
+            <div class="col-3 border-right">Je suis une colonne de taille col-3.</div>
+            <div class="col-3 border-right">Je suis une colonne de taille col-3.</div>
+            <div class="col-3">Je suis une colonne de taille col-3.</div>
+        </div>
+        <br/>
+        <div class="row border">
+            <div class="col-2 border-right">Je suis une colonne de taille col-2.</div>
+            <div class="col-4 border-right">Je suis une colonne de taille col-4.</div>
+            <div class="col-3 border-right">Je suis une colonne de taille col-3.</div>
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-lg-6 col-md-2">Je suis une colonne de taille col-lg-6 col-md-2.</div>
+            <div class="col-lg-6 col-md-3">Je suis une colonne de taille col-lg-6 col-md-3.</div>
+        </div>
     </div>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
