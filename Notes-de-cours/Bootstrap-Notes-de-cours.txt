@@ -67,22 +67,29 @@ XIV.	Les tableaux	20
 6.	Effet lors du passage de la souris sur une ligne	23
 7.	Couleurs des lignes	23
 8.	Tableaux adaptables	23
-XV.	Les formulaires	24
-1.	Classes form-group et form-control	24
-2.	Classe .form-control-file	25
-3.	Attribut readonly	25
-4.	Attribut readonly et la classe .form-control-plaintext	25
-XVI.	Les displays	26
-XVII.	Les navs	26
-XVIII.	Les navbars	26
-XIX.	Classes d’espacement	26
-1.	Les marges	26
-a.	Soit une classe du type .m{côtés}-{taille}.	26
-b.	Soit une classe du type .m{côtés}-{media}-{taille}	27
-2.	Les paddings	27
-XX.	Les bordures	27
-XXI. Les barres de progression	27
-XXI.	Les fenêtres modales	27
+XV.	Classes d’espacement	24
+1.	Les marges	24
+a.	Soit une classe du type .m{côtés}-{taille}.	24
+b.	Soit une classe du type .m{côtés}-{media}-{taille}	24
+2.	Les paddings	24
+XVI.	Les bordures	24
+1.	Les bordures additives	24
+2.	Les bordures soustractives	25
+3.	Les bordures colorées	25
+4.	Les bordures arrondies	25
+XVII.	Les displays	26
+1.	Notation	26
+2.	Cacher des éléments	27
+3.	Impression	27
+XVIII.	Les formulaires	28
+1.	Classes form-group et form-control	28
+2.	Classe .form-control-file	29
+3.	Attribut readonly	29
+4.	Attribut readonly et la classe .form-control-plaintext	29
+XIX.	Les navs	30
+XX.	Les navbars	30
+XXI. Les barres de progression	30
+XXI.	Les fenêtres modales	30
 
 
 
@@ -494,7 +501,8 @@ div class="container">
 <button type="button" class="btn btn-dark">Dark</button>
 <button type="button" class="btn btn-link">Lien</button>
 </div>2. Boutons avec bordures
-On utilise la classe .btn-outline-* à la place de .btn-* : .btn-outline-primary, .btn-outline-success, .btn-outline-warning, .btn-outline-danger, etc.
+On peut avoir des boutons avec une bordure de couleur avec un fond blanc. Le texte est de la couleur de la bordure. Et quand on survole le bouton, la couleur de fond du bouton change et le texte devient blanc. Il redevient « normal » quand la souris n’est plus sur le bouton.
+On utilise la classe .btn-outline-* à la place de .btn-* : .btn-outline-primary, .btn-outline-success, .btn-outline-warning, .btn-outline-danger, etc. 
 Exemple :
 <div class="container">
 <h1>Boutons à bordures</h1>
@@ -671,7 +679,119 @@ Nous allons pouvoir utiliser les couleurs contextuelles de Bootstrap pour change
 Si dans un tableau vous avez vraiment besoin d’afficher tous les colonnes quel que soit le média, il existe une classe .table-responsive qui va ajouter une barre une défilement horizontale. Ce n’est pas super génial en termes de présentation mais au moins le tableau ne sort pas de l’écran…
 
 
-XV. Les formulaires
+XV. Classes d’espacement
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/utilities/spacing/
+Dans Bootstrap, nous avons des classes qui permettent d’ajouter des paddings ou des marges
+1. Les marges
+Ces classes ont deux formats :
+a. Soit une classe du type .m{côtés}-{taille}.
+La taille varie de 0 à 5 (0 = 0rem, 1=0,25 rem,  2 = 0,5 rem, 3=1rem, 4 = 1,5 rem, 5 =  3 rem)
+0,25 rem = 0,25 * la variable SASS $spacer qui est définie par défaut à 1rem).
+« côtés » peut prendre les valeurs suivantes : rien, t (top), b(bottom), l (lef), r (right), x (gauche et droite), y (haut et bas)
+m-* : ajoutera une marge aux 4 côtés.
+mt-* : ajoutera une marge en haut.
+mb-* : ajoutera une marge en bas.
+ml-* : ajoutera une marge à gauche.
+mr-* : ajoutera une marge à droite.
+mx-* : ajoutera une marge à gauche et à droite.
+my-* : ajoutera une marge en haut et en bas.
+b. Soit une classe du type .m{côtés}-{media}-{taille}
+« media » peut prendre une des valeurs suivantes : sm, md, lg, xl. C’est donc conditionné en fonction de la taille de l’écran du périphérique. 
+Exemples : m-sm-7, mx-lg-5, etc.
+2. Les paddings
+Même principe que pour les marges. 
+Donc on pourra avoir deux formes : .p{côtés}-{taille} et p{côtés}-{media}-{taille}.
+XVI. Les bordures
+https://getbootstrap.com/docs/4.0/utilities/borders/
+Il est aisé d’ajouter des bordures à des éléments avec Bootstrap. Si on ajoute la classe .border, une bordure sera ajoutée à votre élément.
+1. Les bordures additives
+Les bordures additives sont en fait des 1/4 bordures. Donc juste un côté sur 4.
+On a donc logiquement 4 classes pour cela. A savoir :
+- .border-top : Le côté c’est le côté haut.
+- .border-bottom : Le côté c’est le côté bas.
+- .border-left : Le côté c’est le côté gauche.
+- .border-right : Le côté c’est le côté droit.
+2. Les bordures soustractives
+Ici on part d’une bordure complète que l’on retire un côté donc 1/4. Cependant avant de pouvoir ajouter ces classes il faudra auparavant ajouter la classe .border suivie de la classe de bordure à soustraire.
+Les classes sont les suivantes :
+- .border-top-0 : On enlève la partie du haut de la bordure.
+- .border-bottom-0 : On enlève la partie du bas  de la bordure.
+- .border-left-0 : On enlève la partie de gauche de la bordure.
+- .border-right-0 : On enlève la partie de droite de la bordure.
+Exemple on soustrait la bordure de droite d’un span : <span class="border border-right-0">Hello World</span>
+3. Les bordures colorées
+Bootstrap suit la logique dans couleur pour les cadres. Il faut avant ajouter la classe .border pour ajouter une couleur de cadre.
+- .border-primary
+- .border-secondary
+- .border-success
+- .border-danger
+- .border-warning
+- .border-info
+- .border-light
+- .border-dark
+- .border-white
+4. Les bordures arrondies
+Ajoutez des classes à un élément pour arrondir facilement ses coins :
+- .rounded : bordures arrondies.
+- .rounded-top : bordure arrondie en haut.
+- .rounded-right : bordures arrondies à droite.
+- .rounded-bottom : bordures arrondies en bas.
+- .rounded-left : bordures arrondies à gauche.
+- .rounded-circle : un cercle et non un cadre entoure notre élément.
+- .rounded-pill : Les côtés gauche et droit sont des demis cercles. Le haut et le bas sont des droites. Ça donne une impression d’une pilule d’où pill en anglais.
+
+
+Exemple : un span avec bordures en forme de pillule avec un fond vert (bg-success), une border en rouge (border-danger), le texte en blanc et un padding de 1. J’ai en plus ajouté un style pour l’épaisseur de 5 (border-5) qui est une classe de Bootstrap 5.
+<span class="border rounded-pill border-danger bg-success text-white p-1" style="border-width: 5px!important;">Hello World !</span>
+Bootstrap 5 définit cette classe de la manière suivante :
+.border-3 {
+    border-width: 3px!important;
+}Ce qui est assez logique. 😊 Bootstrap 5 a des classes .border-1 jusqu’à .border-5. Ceci était juste une petite anecdote sur Bootstrap 5.
+XVII. Les displays
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/utilities/display/
+Vous pouvez changer la valeur du display via des classes Bootstrap.
+1. Notation
+Ces classes sont nommées en utilisant le format :
+1. .d-{value} 
+2. .d-{media}-{value} pour  sm, md, lg, and xl.
+Où les valeurs peuvent être :
+- None
+- Inline
+- inline-block
+- block
+- table
+- table-cell
+- table-row
+- flex
+- inline-flex
+Exemple : deux div sur la même ligne
+<div class="d-inline p-2 bg-primary text-white">d-inline</div>
+<div class="d-inline p-2 bg-dark text-white">d-inline</div>Exemple : deux div affichés en block
+<span class="d-block p-2 bg-primary text-white">d-block</span>
+<span class="d-block p-2 bg-dark text-white">d-block</span>
+2. Cacher des éléments
+Il est parfois utile de cacher des éléments en fonction du média, par exemple un smartphone. Pour que le site soit responsive au maximum.
+Pour masquer des éléments, utilisez simplement la classe .d-none ou l'une des classes 
+.d- {sm, md, lg, xl}-none pour toute variation d'écran.
+Taille d’écranClassCaché pour tous.d-noneCaché seulement sur xs.d-none .d-sm-blockCaché seulement sur sm.d-sm-none .d-md-blockCaché seulement sur md.d-md-none .d-lg-blockCaché seulement sur lg.d-lg-none .d-xl-blockCaché seulement sur xl.d-xl-noneVisible pour tous.d-blockVisible seulement sur xs.d-block .d-sm-noneVisible seulement sur sm.d-none .d-sm-block .d-md-noneVisible seulement sur md.d-none .d-md-block .d-lg-noneVisible seulement sur lg.d-none .d-lg-block .d-xl-noneVisible seulement sur xl.d-none .d-xl-block
+Exemples :
+        <div class="d-lg-none">Je suis caché pour des écrans d’au moins lg. Mais donc visible pour des écrans plus petits que lg.</div>
+        <div class="d-none d-lg-block">Je suis caché pour des écrans plus petits que lg. Mais visible pour des écrans d'au moins lg.</div>3. Impression
+Il est possible de choisir ce qui sera affiché lors de l’impression. On peut cacher ou montrer des informations pour une impression. Pour cela on utilise les classes suivantes :
+- .d-print-none
+- .d-print-inline
+- .d-print-inline-block
+- .d-print-block
+- .d-print-table
+- .d-print-table-row
+- .d-print-table-cell
+- .d-print-flex
+- .d-print-inline-flex
+Exemples
+<div class="d-print-none">Affiché sur écran seulement (Caché à l’impression)</div>
+<div class="d-none d-print-block">Impression seulement (Caché à l’écran)</div>
+<div class="d-none d-lg-block d-print-block">Caché pour des écrans larges, mais toujours affiché pour l’impression</div>
+XVIII. Les formulaires
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/components/forms/
 Bootstrap fournit un ensemble de classes qui permettent de rendre un formulaire beaucoup plus joli visuellement. De base, les formulaires html sont assez austères.
 Pour utiliser les classes que nous allons voir, il faut bien entendu utiliser la balise « form » pour nos formulaires.
@@ -701,7 +821,7 @@ Exemple :
         <label class="form-check-label" for="exempleCheck">Check me out</label>
     </div>
     <button type="submit" class="btn btn-primary">Soumettre</button>
-</form>Rappelons que l’attribut placeholder permet d’afficher un texte dans un champ du formulaire. Exemple : « Entrer un email ». Ce message sera affiché tant que rien n’est indiqué dans le champ du formulaire.
+</form>Rappelons que l’attribut placeholder permet d’afficher un texte dans un champ du formulaire. Exemple : « Entrer un email ». Ce message sera affiché tant que rien n’est indiqué dans le champ du formulaire. Mais ce texte dans le placeholder ne sera pas pris comme valeur si on soumet le formulaire.
 Ensuite, il est important de bien spécifier le type. En effet, ce type permettra d’être intercepté en cas de mauvais type. Exemple le type email qui testera un peu la validité d’un email. 
 L’attribut required indique au formulaire que ce champ est nécessaire et ne peut valider le formulaire tant que ce champ est vide. Attention qu’il ne faut pas croire aveuglément un formulaire reçu côté back-end. Normalement les mêmes règles de validations doivent être de rigueur côté serveur. Une règle : « Ne jamais croire ce que nous recevons du front-end. On reteste les données côté back-end. »
 2. Classe .form-control-file
@@ -713,55 +833,22 @@ Exemple :
 </div>
 3. Attribut readonly
 Quand un élément comprend l’attribut readonly, le contrôle du formulaire sera désactivé et on ne saura pas le cliquer ou y écrire quelque chose. Le contrôle est juste en lecture seule.
-Le contrôle sera en gris foncé avec son texte prédéfini. Exemple, dans un formulaire si on connait déjà le nom d’utilisateur et qu’il ne changera pas, on peut le préremplir et mettre l’attribut readonly.
+Le contrôle sera en gris foncé avec son texte prédéfini. Exemple, dans un formulaire si on connait déjà le nom d’utilisateur et qu’il ne changera pas, on peut le préremplir et mettre l’attribut readonly. Cependant il sera envoyé par le formulaire. Si vous ne voulez pas qu’il soit envoyé, utilisez l’attribut disabled.
 Exemple :
 <input id="username"  class="form-control" type="text" placeholder="mcfly" readonly>
 4. Attribut readonly et la classe .form-control-plaintext
-Ici le comportement sera identique : on ne saura pas interagir. Cependant la classe .form-control-plaintext supprime le bord du contrôle input. Donnant l’impression que c’est un simple texte.
+Ici le comportement sera identique : on ne saura pas interagir. Cependant la classe .form-control-plaintext supprime le bord du contrôle input. Donnant l’impression que c’est un simple texte. Mais si on clique dessus on voit apparaître les bordures du contrôle.
 Exemple :
 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="johnny.piette@gmail.com">
 
 
-
-
-
-
-
-
-XVI. Les displays
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/utilities/display/
-
-
-XVII. Les navs
+XIX. Les navs
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navs/
 
 
-XVIII. Les navbars
+XX. Les navbars
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navbar/
 
-XIX. Classes d’espacement
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/utilities/spacing/
-Dans Bootstrap, nous avons des classes qui permettent d’ajouter des paddings ou des marges
-1. Les marges
-Ces classes ont deux formats :
-a. Soit une classe du type .m{côtés}-{taille}.
-La taille varie de 0 à 5 (0 = 0rem, 1=0,25 rem,  2 = 0,5 rem, 3=1rem, 4 = 1,5 rem, 5 =  3 rem)
-0,25 rem = 0,25 * la variable SASS $spacer qui est définie par défaut à 1rem).
-« côtés » peut prendre les valeurs suivantes : rien, t (top), b(bottom), l (lef), r (right), x (gauche et droite), y (haut et bas)
-m-* : ajoutera une marge aux 4 côtés.
-mt-* : ajoutera une marge en haut.
-mb-* : ajoutera une marge en bas.
-ml-* : ajoutera une marge à gauche.
-mr-* : ajoutera une marge à droite.
-mx-* : ajoutera une marge à gauche et à droite.
-my-* : ajoutera une marge en haut et en bas.
-b. Soit une classe du type .m{côtés}-{media}-{taille}
-« media » peut prendre une des valeurs suivantes : sm, md, lg, xl. C’est donc conditionné en fonction de la taille de l’écran du périphérique. 
-Exemples : m-sm-7, mx-lg-5, etc.
-2. Les paddings
-Même principe que pour les marges. 
-Donc on pourra avoir deux formes : .p{côtés}-{taille} et p{côtés}-{media}-{taille}.
-XX. Les bordures
 
 
 
