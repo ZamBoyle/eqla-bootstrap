@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+    <!-- Bootstrap icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./Styles/site.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <br><br><br><br>
+        <span class="border border-5 rounded-pill border-danger bg-success text-white p-1">Hello World !</span><br><br><br><br>
+
+
+        <form action="border.html" method="GET">
+            <div class="form-row align-items-center">
+                <div class="col-sm-3 my-1">
+                    <label class="sr-only" for="inlineFormInputName">Name</label>
+                    <input name="who" type="text" class="form-control" id="inlineFormInputName" placeholder="Jane Doe">
+                </div>
+                <br/>
+                <div class="col-sm-3 my-1">
+                    <label class="sr-only" for="inlineFormInputGroupUsername">Username</label>
+                    <div class="input-group">
+                        <div class="input-group-prepend">
+                            <div class="input-group-text">@</div>
+                        </div>
+                        <input type="text" class="form-control" id="inlineFormInputGroupUsername" placeholder="Username">
+                    </div>
+                </div>
+                <div class="col-auto my-1">
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="autoSizingCheck2">
+                        <label class="form-check-label" for="autoSizingCheck2">
+                    Remember me
+                  </label>
+                    </div>
+                </div>
+                <div class="col-auto my-1">
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </div>
+            </div>
+        </form>
+        <br/><br/><br/>
+        <div class="d-inline p-2 bg-primary text-white">d-inline</div>
+        <div class="d-inline p-2 bg-dark text-white">d-inline</div>
+        <div class="d-none d-sm-block">Je suis visible</div>
+        <div class="d-lg-none">Je suis caché pour des écrans plus grands que lg. Mais donc visible pour des écrans plus petits que lg.</div>
+        <div class="d-none d-lg-block">Je suis caché pour des écrans plus petits que lg. Mais visible pour des écrans d'au moins lg.</div>
+
+
+    </div>
+    <!--         .d-{value} for xs
+.d-{breakpoint}-{value} for sm, md, lg, and xl.
+ -->
+    <br><br><br><br>
+    </div>
+    <!-- jQuery and Bootstrap Bundle (includes Popper) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
+</body>
+
+</html>
