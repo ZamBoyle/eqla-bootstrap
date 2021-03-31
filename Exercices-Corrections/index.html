@@ -31,7 +31,12 @@
         <li><a href="#ce7" class="text-decoration-none"> Exercice n°7 - Lecteur d'écran</a></li>
         <li><a href="#ce8" class="text-decoration-none"> Exercices n°8.1 à 8.4 - Le composant carousel</a></li>
         <li><a href="#ce8.5" class="text-decoration-none"> Exercices n°8.5 - Le composant carousel: Les contrôles pause/play</a></li>
-        <li><a href="#ce2" class="text-decoration-none"> Exercice n°9 - La grille Bootstrap</a></li>
+        <li><a href="#ce9" class="text-decoration-none"> Exercice n°9 - La grille Bootstrap</a></li>
+        <li><a href="#ce10" class="text-decoration-none"> Exercice n°10 - Les couleurs</a></li>
+        <li><a href="#ce11" class="text-decoration-none"> Exercice n°11 - Les boutons</a></li>
+        <li><a href="#ce12" class="text-decoration-none"> Exercice n°12 - Les tableaux</a></li>
+        <!--         <li><a href="#ce13" class="text-decoration-none"> Exercice n°13 - Les classes d'espacement</a></li>
+        <li><a href="#ce14" class="text-decoration-none"> Exercice n°14 - Les displays</a></li> -->
     </ul>
     <hr/>
     <a name="ce2"></a>
@@ -329,6 +334,211 @@ pauseButton.addEventListener('click', function() {
             <div class="col-lg-6 col-md-3">Je suis une colonne de taille col-lg-6 col-md-3.</div>
         </div>
     </div>
+    <a name="ce10"></a>
+    <h2>Exercice 10 - Les couleurs</h2>
+    <h3>Code html
+        <a id="bce10" onclick="CopyToClipboard('ex10')" class="btn btn-primary" href="#bce10">Cliquer pour copier le code</a>
+    </h3>
+    <pre id="ex10">
+&#x3C;p class=&#x22;text-success&#x22;&#x3E;Je suis en vert.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-warning&#x22;&#x3E;Je suis en orange.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-danger&#x22;&#x3E;Je suis en rouge.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-primary&#x22;&#x3E;Je suis en bleu.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-info&#x22;&#x3E;Je suis en cyan.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-success&#x22;&#x3E;Je suis en blanc sur fond vert.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-warning&#x22;&#x3E;Je suis en blanc sur fond orange.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-danger&#x22;&#x3E;Je suis en blanc sur fond rouge.&#x3C;/p&#x3E;
+&#x3C;p class=&#x22;text-white bg-dark&#x22;&#x3E;Je suis en blanc sur fond dark.&#x3C;/p&#x3E;
+&#x3C;div class=&#x22;container&#x22;&#x3E;
+    &#x3C;p class=&#x22;text-white bg-dark&#x22;&#x3E;Je suis en blanc sur fond dark.&#x3C;/p&#x3E;
+&#x3C;/div&#x3E;</pre>
+    <h3>Résultat</h3>
+
+    <p class="text-success">Je suis en vert.</p>
+    <p class="text-warning">Je suis en orange.</p>
+    <p class="text-danger">Je suis en rouge.</p>
+    <p class="text-primary">Je suis en bleu.</p>
+    <p class="text-info">Je suis en cyan.</p>
+    <p class="text-white bg-success">Je suis en blanc sur fond vert.</p>
+    <p class="text-white bg-warning">Je suis en blanc sur fond orange.</p>
+    <p class="text-white bg-danger">Je suis en blanc sur fond rouge.</p>
+    <p class="text-white bg-dark">Je suis en blanc sur fond dark.</p>
+    <div class="container">
+        <p class="text-white bg-dark">Je suis en blanc sur fond dark.</p>
+    </div>
+
+    <a name="ce11"></a>
+    <h2>Exercice 11 - Les boutons</h2>
+    <h3>Code html
+        <a id="bce11" onclick="CopyToClipboard('ex11')" class="btn btn-primary" href="#bce11">Cliquer pour copier le code</a>
+    </h3>
+    <pre id="ex11">
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-primary&#x22;&#x3E;Confirmer&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-success&#x22;&#x3E;Inscription r&#xE9;ussie !&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-warning&#x22; disabled&#x3E;D&#xE9;sactiver l&#x27;utilisateur !&#x3C;/button&#x3E;
+&#x3C;button type=&#x22;button&#x22; class=&#x22;btn btn-danger&#x22;&#x3E;D&#xE9;sactiver cet utilisateur !&#x3C;/button&#x3E;</pre>
+    <h3>Résultat</h3>
+    <button type="button" class="btn btn-primary">Confirmer</button>
+    <button type="button" class="btn btn-success">Inscription réussie !</button>
+    <button type="button" class="btn btn-warning" disabled>Désactiver l'utilisateur !</button>
+    <button type="button" class="btn btn-danger">Désactiver cet utilisateur !</button>
+
+    <a name="ce12"></a>
+    <h2>Exercice 12 - Les tableaux</h2>
+    <h3>Code html
+        <a id="bce12" onclick="CopyToClipboard('ex12')" class="btn btn-primary" href="#bce12">Cliquer pour copier le code</a>
+    </h3>
+    <pre id="ex12">
+    &#x3C;table class=&#x22;table table-striped table-bordered table-hover table-responsive&#x22;&#x3E;
+        &#x3C;thead class=&#x22;thead-dark&#x22;&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Nom&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Pr&#xE9;nom&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Sexe&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Date de naissance&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Lieu de naissance&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;T&#xE9;l&#xE9;phone fixe&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;T&#xE9;l&#xE9;phone gsm&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Nom de la formation&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Lieu de la formation&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Moyen de transport&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Rue&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Num&#xE9;ro de police&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Code postal&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Commune&#x3C;/th&#x3E;
+                &#x3C;th scope=&#x22;col&#x22;&#x3E;Pays&#x3C;/th&#x3E;
+            &#x3C;/tr&#x3E;
+        &#x3C;/thead&#x3E;
+        &#x3C;tbody&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;td&#x3E;Flower&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Margueritte&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;F&#xE9;minin&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;18 mars 2000&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Li&#xE8;ge&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;45454545454545454&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;87821214512214554&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;BlindCode&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Bruxelles&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;SNCB&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Rue des Coquelicots&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;78&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;5000&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Namur&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Belgique&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;td&#x3E;Thumas&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Marie&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;F&#xE9;minin&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;15 septembre 1986&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Li&#xE8;ge&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;98998989887878775&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;87821214512214554&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;BlindCode&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Bruxelles&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;TEC&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;All&#xE9;e des Sapins&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;15&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;5300&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Andenne&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Belgique&#x3C;/td&#x3E;
+
+            &#x3C;/tr&#x3E;
+            &#x3C;tr&#x3E;
+                &#x3C;td&#x3E;Ange&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Gabriel&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Masculin&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;9 juillet 1974&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Li&#xE8;ge&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;45454545454545454&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;87821214512214554&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Blind4Code&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;LLN&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;SNCB+TEC&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Rue du Commandant&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;9&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;4000&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Li&#xE8;ge&#x3C;/td&#x3E;
+                &#x3C;td&#x3E;Belgique&#x3C;/td&#x3E;
+            &#x3C;/tr&#x3E;
+        &#x3C;/tbody&#x3E;
+    &#x3C;/table&#x3E;</pre>
+    <table class="table table-striped table-bordered table-hover table-responsive">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Nom</th>
+                <th scope="col">Prénom</th>
+                <th scope="col">Sexe</th>
+                <th scope="col">Date de naissance</th>
+                <th scope="col">Lieu de naissance</th>
+                <th scope="col">Téléphone fixe</th>
+                <th scope="col">Téléphone gsm</th>
+                <th scope="col">Nom de la formation</th>
+                <th scope="col">Lieu de la formation</th>
+                <th scope="col">Moyen de transport</th>
+                <th scope="col">Rue</th>
+                <th scope="col">Numéro de police</th>
+                <th scope="col">Code postal</th>
+                <th scope="col">Commune</th>
+                <th scope="col">Pays</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Flower</td>
+                <td>Margueritte</td>
+                <td>Féminin</td>
+                <td>18 mars 2000</td>
+                <td>Liège</td>
+                <td>45454545454545454</td>
+                <td>87821214512214554</td>
+                <td>BlindCode</td>
+                <td>Bruxelles</td>
+                <td>SNCB</td>
+                <td>Rue des Coquelicots</td>
+                <td>78</td>
+                <td>5000</td>
+                <td>Namur</td>
+                <td>Belgique</td>
+            </tr>
+            <tr>
+                <td>Thumas</td>
+                <td>Marie</td>
+                <td>Féminin</td>
+                <td>15 septembre 1986</td>
+                <td>Liège</td>
+                <td>98998989887878775</td>
+                <td>87821214512214554</td>
+                <td>BlindCode</td>
+                <td>Bruxelles</td>
+                <td>TEC</td>
+                <td>Allée des Sapins</td>
+                <td>15</td>
+                <td>5300</td>
+                <td>Andenne</td>
+                <td>Belgique</td>
+
+            </tr>
+            <tr>
+                <td>Ange</td>
+                <td>Gabriel</td>
+                <td>Masculin</td>
+                <td>9 juillet 1974</td>
+                <td>Liège</td>
+                <td>45454545454545454</td>
+                <td>87821214512214554</td>
+                <td>Blind4Code</td>
+                <td>LLN</td>
+                <td>SNCB+TEC</td>
+                <td>Rue du Commandant</td>
+                <td>9</td>
+                <td>4000</td>
+                <td>Liège</td>
+                <td>Belgique</td>
+            </tr>
+        </tbody>
+    </table>
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
     <script src="/bootstrap/js/jquery-3.5.1.slim.min.js"></script>
