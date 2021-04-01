@@ -67,29 +67,30 @@ XIV.	Les tableaux	20
 6.	Effet lors du passage de la souris sur une ligne	23
 7.	Couleurs des lignes	23
 8.	Tableaux adaptables	23
-XV.	Classes d’espacement	24
-1.	Les marges	24
-a.	Soit une classe du type .m{côtés}-{taille}.	24
+XV.	Classes d’espacement	23
+1.	Les marges	23
+a.	Soit une classe du type .m{côtés}-{taille}.	23
 b.	Soit une classe du type .m{côtés}-{media}-{taille}	24
 2.	Les paddings	24
 XVI.	Les bordures	24
 1.	Les bordures additives	24
-2.	Les bordures soustractives	25
+2.	Les bordures soustractives	24
 3.	Les bordures colorées	25
 4.	Les bordures arrondies	25
-XVII.	Les displays	26
+XVII.	Les affichages	26
 1.	Notation	26
-2.	Cacher des éléments	27
+2.	Cacher des éléments	26
 3.	Impression	27
-XVIII.	Les formulaires	28
+XVIII.	Dimensionnement	28
+XIX.	Les formulaires	28
 1.	Classes form-group et form-control	28
 2.	Classe .form-control-file	29
 3.	Attribut readonly	29
-4.	Attribut readonly et la classe .form-control-plaintext	29
-XIX.	Les navs	30
-XX.	Les navbars	30
+4.	Attribut readonly et la classe .form-control-plaintext	30
+XX.	Les navs	30
+XXI.	Les navbars	30
 XXI. Les barres de progression	30
-XXI.	Les fenêtres modales	30
+XXII.	Les fenêtres modales	30
 
 
 
@@ -316,7 +317,7 @@ Exemple :
 <a class = "sr-only" href="#">Votre formateur doit absolument aller chez le coiffeur mais ça restera entre nous.</a>
 <a class = "sr-only sr-only-focusable" href ="#">Votre formateur est très bien coiffé.</a>
 </div>X. Le Composant Carousel
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/components/carousel/
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/carousel/
 Bootstrap fournit nativement un composant visuel de diaporama très sympathique que l’on appelle le carrousel. Il est fréquent de le voir sur des pages webs. Il présente par exemple des promos qui défilent via des images, du texte avec un changement cyclique définissable.
 On peut y mettre des images, du texte, etc.
 1. Construction du carousel Bootstrap
@@ -377,7 +378,7 @@ Exemple complet de contrôles accessibles
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="sr-only">Suivant</span>
             </a>XI. La Grille de Bootstrap
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/layout/grid/
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/layout/grid/
 Bootstrap propose un système de grille très pratique et responsive. Elle permet d’agencer des contenus sous formes de colonnes. 
 Cette grille est composée d’une ligne de 12 colonnes. On pourrait penser que c’est un tableau. Si on veut mais alors d’une seule ligne. Ce système de grille permet d’ajouter des éléments sous formes de colonnes.
 Et comme vous le savez maintenant, utilisez Bootstrap, c’est utiliser ses classes. 
@@ -457,13 +458,13 @@ Expliquons-le petit à petit :
 - .col-6 col-md-4 : idem que précédemment mais sera à côté de la colonne précédente si résolution inférieure à md.
 Donc si la résolution est > = md, on aura 3 colonnes identiques (.col-md-4). Dans le cas contraire, on aura une colonne qui prendra toute une ligne (.col-12). Et sur une autre ligne, nous aurons deux colonnes identiques (.col-6) qui prendront toute la ligne.
 XII. Les couleurs
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/utilities/colors/
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/utilities/colors/
 Bootstrap dispose de plusieurs classes pour les couleurs. Aux classes .bg-* (pour le background d’un élément) et aux classes .text-* on ajoute un des suffixes suivants :
 - primary : bleu 
 - secondary : gris 
 - success : vert 
 - danger : rouge 
-- warning : jaune 
+- warning : orange 
 - info : cyan 
 - light : gris clair 
 - dark : gris très foncé 
@@ -483,7 +484,7 @@ Pour le texte les classes suivantes peuvent aussi être utilisées :
 - white-50 : texte blanc semi transparent
 Comme on peut le constater, Bootstrap fournit une cohérence dans l’utilisation des couleurs standards. Vous verrez que cette logique est suivie pour la couleur des boutons que nous allons justement voir au chapitre suivant.
 XIII. Les boutons
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/components/buttons/
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/buttons/
 Les classes Bootstrap pour les boutons sont faciles à utiliser. On utilise la balise <bouton>. Avec l’attribut type="button". Si on ne donne pas d’attribut type, il agira par défaut comme un type="submit" et essaiera d’envoyer un formulaire.
 1. Boutons avec une couleur de fond
 Vous devez en premier mettre la classe .btn suivit de la couleur du bouton via la classe .btn-* : .btn-primary, .btn-success, .btn-warning, .btn-danger, etc.
@@ -540,7 +541,7 @@ On le fait en utilisant la classe .active pour l’activer et .disabled pour le 
 Exemple :
 <button type="button" class="btn btn-primary active">Active Primary</button>
 <button type="button" class="btn btn-primary disabled">Disabled Primary</button>XIV. Les tableaux
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/content/tables/
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/content/tables/
 Bootstrap permet de styliser nos tableaux.
 1. Simple tableau Bootstrap
 La classe .table permet de donner du style à nos tableaux on l’ajoute à la balise <table>. 
@@ -676,11 +677,9 @@ Nous allons pouvoir utiliser les couleurs contextuelles de Bootstrap pour change
 - .table-light ;
 - .table-dark.
 8. Tableaux adaptables
-Si dans un tableau vous avez vraiment besoin d’afficher tous les colonnes quel que soit le média, il existe une classe .table-responsive qui va ajouter une barre une défilement horizontale. Ce n’est pas super génial en termes de présentation mais au moins le tableau ne sort pas de l’écran…
-
-
+Si dans un tableau vous avez vraiment besoin d’afficher tous les colonnes quel que soit le média, il existe une classe .table-responsive qui va ajouter une barre une défilement horizontale. 
 XV. Classes d’espacement
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/utilities/spacing/
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/utilities/spacing/
 Dans Bootstrap, nous avons des classes qui permettent d’ajouter des paddings ou des marges
 1. Les marges
 Ces classes ont deux formats :
@@ -702,7 +701,7 @@ Exemples : m-sm-7, mx-lg-5, etc.
 Même principe que pour les marges. 
 Donc on pourra avoir deux formes : .p{côtés}-{taille} et p{côtés}-{media}-{taille}.
 XVI. Les bordures
-https://getbootstrap.com/docs/4.0/utilities/borders/
+https://getbootstrap.com/docs/4.6/utilities/borders/
 Il est aisé d’ajouter des bordures à des éléments avec Bootstrap. Si on ajoute la classe .border, une bordure sera ajoutée à votre élément.
 1. Les bordures additives
 Les bordures additives sont en fait des 1/4 bordures. Donc juste un côté sur 4.
@@ -739,15 +738,14 @@ Ajoutez des classes à un élément pour arrondir facilement ses coins :
 - .rounded-left : bordures arrondies à gauche.
 - .rounded-circle : un cercle et non un cadre entoure notre élément.
 - .rounded-pill : Les côtés gauche et droit sont des demis cercles. Le haut et le bas sont des droites. Ça donne une impression d’une pilule d’où pill en anglais.
-
-
 Exemple : un span avec bordures en forme de pillule avec un fond vert (bg-success), une border en rouge (border-danger), le texte en blanc et un padding de 1. J’ai en plus ajouté un style pour l’épaisseur de 5 (border-5) qui est une classe de Bootstrap 5.
 <span class="border rounded-pill border-danger bg-success text-white p-1" style="border-width: 5px!important;">Hello World !</span>
 Bootstrap 5 définit cette classe de la manière suivante :
 .border-3 {
     border-width: 3px!important;
 }Ce qui est assez logique. 😊 Bootstrap 5 a des classes .border-1 jusqu’à .border-5. Ceci était juste une petite anecdote sur Bootstrap 5.
-XVII. Les displays
+
+XVII. Les affichages
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/utilities/display/
 Vous pouvez changer la valeur du display via des classes Bootstrap.
 1. Notation
@@ -773,8 +771,20 @@ Exemple : deux div sur la même ligne
 Il est parfois utile de cacher des éléments en fonction du média, par exemple un smartphone. Pour que le site soit responsive au maximum.
 Pour masquer des éléments, utilisez simplement la classe .d-none ou l'une des classes 
 .d- {sm, md, lg, xl}-none pour toute variation d'écran.
-Taille d’écranClassCaché pour tous.d-noneCaché seulement sur xs.d-none .d-sm-blockCaché seulement sur sm.d-sm-none .d-md-blockCaché seulement sur md.d-md-none .d-lg-blockCaché seulement sur lg.d-lg-none .d-xl-blockCaché seulement sur xl.d-xl-noneVisible pour tous.d-blockVisible seulement sur xs.d-block .d-sm-noneVisible seulement sur sm.d-none .d-sm-block .d-md-noneVisible seulement sur md.d-none .d-md-block .d-lg-noneVisible seulement sur lg.d-none .d-lg-block .d-xl-noneVisible seulement sur xl.d-none .d-xl-block
-Exemples :
+Exemples de combinaisons :
+Caché pour tous:.d-none
+Caché seulement sur xs:.d-none .d-sm-block
+Caché seulement sur sm:.d-sm-none .d-md-block
+Caché seulement sur md:.d-md-none .d-lg-block
+Caché seulement sur lg:.d-lg-none .d-xl-block
+Caché seulement sur xl:.d-xl-none
+Visible pour tous:.d-block
+Visible seulement sur xs:.d-block .d-sm-none
+Visible seulement sur sm:.d-none .d-sm-block .d-md-none
+Visible seulement sur md:.d-none .d-md-block .d-lg-none
+Visible seulement sur lg:.d-none .d-lg-block .d-xl-none
+Visible seulement sur xl:.d-none .d-xl-block
+Exemples html:
         <div class="d-lg-none">Je suis caché pour des écrans d’au moins lg. Mais donc visible pour des écrans plus petits que lg.</div>
         <div class="d-none d-lg-block">Je suis caché pour des écrans plus petits que lg. Mais visible pour des écrans d'au moins lg.</div>3. Impression
 Il est possible de choisir ce qui sera affiché lors de l’impression. On peut cacher ou montrer des informations pour une impression. Pour cela on utilise les classes suivantes :
@@ -791,8 +801,19 @@ Exemples
 <div class="d-print-none">Affiché sur écran seulement (Caché à l’impression)</div>
 <div class="d-none d-print-block">Impression seulement (Caché à l’écran)</div>
 <div class="d-none d-lg-block d-print-block">Caché pour des écrans larges, mais toujours affiché pour l’impression</div>
-XVIII. Les formulaires
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.0/components/forms/
+
+
+XVIII. Dimensionnement
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/utilities/sizing/
+Il est possible de dimensionner un élément avec les classes .w-* pour la largeur et .h-* pour la hauteur.
+Voici les valeurs que peuvent prendre ces classes :
+• m-25, m-50, m-75, m-100, m-auto
+• h-25, h-50, h-75, h-100, h-auto
+Exemple :
+<div class="w-75">Je prends 75%</div>
+
+XIX. Les formulaires
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/forms/
 Bootstrap fournit un ensemble de classes qui permettent de rendre un formulaire beaucoup plus joli visuellement. De base, les formulaires html sont assez austères.
 Pour utiliser les classes que nous allons voir, il faut bien entendu utiliser la balise « form » pour nos formulaires.
 1. Classes form-group et form-control
@@ -842,11 +863,11 @@ Exemple :
 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="johnny.piette@gmail.com">
 
 
-XIX. Les navs
+XX. Les navs
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navs/
 
 
-XX. Les navbars
+XXI. Les navbars
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navbar/
 
 
@@ -856,7 +877,7 @@ Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navbar/
 XXI. Les barres de progression
 
 
-XXI. Les fenêtres modales
+XXII. Les fenêtres modales
 
 
 
