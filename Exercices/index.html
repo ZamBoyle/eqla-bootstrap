@@ -39,7 +39,9 @@
             <li><a href="#ex11" class="text-decoration-none"> Exercice n°11 - Les boutons</a></li>
             <li><a href="#ex12" class="text-decoration-none"> Exercice n°12 - Les tableaux</a></li>
             <li><a href="#ex13" class="text-decoration-none"> Exercice n°13 - Les classes d'espacement</a></li>
-            <li><a href="#ex14" class="text-decoration-none"> Exercice n°14 - Les displays</a></li>
+            <li><a href="#ex14" class="text-decoration-none"> Exercice n°14 - Les bordures</a></li>
+            <li><a href="#ex15" class="text-decoration-none"> Exercice n°15 - Les dimensionnements</a></li>
+            <li><a href="#ex16" class="text-decoration-none"> Exercice n°16 - Les affichages</a></li>
         </ul>
         <hr/>
     </div>
@@ -322,29 +324,68 @@
         <ol>
             <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
             <li>Allez à la ligne n°18.</li>
-            <li></li>
+            <li>Faites un div <code>class='container'</code> et ajoutez-y une bordure.</li>
+            <li>Faites un div et n'ajoutez que les bordures du haut et du bas. Donc pas de bordures gauche et droite.</li>
+            <li>Faites un div et n'ajoutez qu les bordures de gauche et droite. Donc pas de bordures haut et bas.</li>
+            <li>Expliquez ce que va faire le code suivant:
+                <pre class="border p-2">
+&#x3C;div class=&#x22;mt-2 border border-left-0 border-right-0&#x22;&#x3E;Salut.&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border border-left-0 border-top-0 border-right-0&#x22;&#x3E;Hey salut !&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border border-left-0 border-top-0 border-right-0&#x22;&#x3E;Dis, je t'ai salu&eacute; hein ?!&#x3C;/div&#x3E;   </pre>
+            </li>
+            <li>Expliquez ce que va faire le code suivant:
+                <pre class="border p-2">
+&#x3C;div class=&#x22;mt-2 border-top border-bottom&#x22;&#x3E;Salut.&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom&#x22;&#x3E;Hey salut !&#x3C;/div&#x3E;
+&#x3C;div class=&#x22;border-bottom&#x22;&#x3E;Dis, je t&#x27;ai salu&#xE9; hein ?!&#x3C;/div&#x3E;</pre>
+            </li>
+            <li>Finalement que pouvez-vous dire des points 6. et 7. ?</li>
+            <li>Faites un div qui sera vu qu'à l'impression. Il contiendra l'information suivante: (c) Eqla 2021.</li>
+            <li>Faites des divs avec des bordures colorées avec les couleurs Bootstrap que vous connaissez (primary, secondary, success, warning, etc.). Mettez le texte de votre choix.</li>
+            <li>Faites un div avec des coins arrondis.</li>
+            <li>Faites un div avec une bordure "pillule".</li>
+            <li>Affichez une image et mettez une bordure en forme de cercle/ellipse. Cette image sera responsive et sera une vignette.</li>
         </ol>
-        <div class="d-inline p-2 bg-success text-white">Le feu est vert.</div>
+        <!--         <div class="d-inline p-2 bg-success text-white">Le feu est vert.</div>
         <div class="d-inline p-2 bg-warning text-white">Le feu est orange.</div>
-        <div class="mt-2 p-2 bg-danger text-white text-justify d-none d-xl-block">Je suis visible sur écran xl</div>
+        <div class="mt-2 p-2 bg-danger text-white text-justify d-none d-md-block d-lg-none">Je suis visible d-sm-none d-md-block</div>
+        <div class="mt-2 border border-left-0 border-right-0">Salut.</div>
+        <div class="border border-left-0 border-top-0 border-right-0">Hey salut !</div>
+        <div class="border border-left-0 border-top-0 border-right-0">Dis, je t'ai salué hein ?!</div>
 
+        <div class="mt-2 border-top border-bottom">Salut.</div>
+        <div class="border-bottom">Hey salut !</div>
+        <div class="border-bottom">Dis, je t'ai salué hein ?!</div>
+        <img src="http://eqla.ddns.net/bootstrap/Exercices-Corrections/Images/mario.jpg" class="mt-2 p-2 rounded-circle img-fluid img-thumbnail">
+        <div class="border-bottom d-none d-print-block">(c) Eqla 2021.</div>
+        <div class="ml-3 p-2 w-75 bg-primary text-white text-center rounded">Hello World !</div>        
+    -->
         <a name="ex15"></a>
-        <h2>Exercice n°15 - Les displays</h2>
+        <h2>Exercice n°15 - Les dimensionnements</h2>
+        <ol>
+            <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
+            <li>Allez à la ligne n°18.</li>
+            <li>Affichez un div ayant des bordures arrondies, un padding de 2rem, une marge gauche de 3 rem, prenant 75% de la largeur, le texte sera blanc, la couleur de fond sera bleue (primary) et centré. Le texte sera: Hello World !</li>
+            <li>Affichez une image qui fera 50% de la largeur.</li>
+        </ol>
+
+        <a name="ex16"></a>
+        <h2>Exercice n°16 - Les affichages</h2>
         <ol>
             <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
             <li>Allez à la ligne n°18.</li>
             <li>Affichez deux divs sur la même ligne (inline). Le texte sera blanc et les divs auront les fonds vert et rouge. Ajoutez le texte aux deux: Je suis un texte dans un div.</li>
             <li>Même chose qu'auparant mais ajoutez un padding de 2 rem à chaque div.</li>
             <li>Ajoutez un div avec un margin haut de 2rem et faites-le apparaître seulement sur un écran large (lg). Ajoutez le texte je suis visible sur écran large.</li>
-
+            <li>Ajoutez un div avec un margin haut de 2rem, un padding de 2rem et cachez-le seulement sur un écran large (lg). Ajoutez le texte je suis visible sur écran large.</li>
         </ol>
 
-        <a name="ex16"></a>
-        <h2>Exercice n°16 - Les formulaires</h2>
+        <!--         <a name="ex17"></a>
+        <h2>Exercice n°17 - Les formulaires</h2>
         <ol>
             <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
             <li>Allez à la ligne n°18.</li>
-        </ol>
+        </ol> -->
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
