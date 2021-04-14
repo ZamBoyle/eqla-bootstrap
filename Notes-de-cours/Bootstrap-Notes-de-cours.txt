@@ -810,8 +810,7 @@ Voici les valeurs que peuvent prendre ces classes :
 • m-25, m-50, m-75, m-100, m-auto
 • h-25, h-50, h-75, h-100, h-auto
 Exemple :
-<div class="w-75">Je prends 75%</div>
-
+<div class="w-75">Je prends 75% de la largeur.</div>
 XIX. Les formulaires
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/forms/
 Bootstrap fournit un ensemble de classes qui permettent de rendre un formulaire beaucoup plus joli visuellement. De base, les formulaires html sont assez austères.
