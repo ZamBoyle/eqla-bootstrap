@@ -648,23 +648,64 @@ pauseButton.addEventListener('click', function() {
     <div class="d-lg-none d-xl-block mt-2 p-2">Je suis caché sur écran large.</div>
     <div class="d-none d-print-block">(c) Eqla 2021.</div>
 
-    <a name="ce17"></a>
+    <!--     <a name="ce17"></a>
     <h2>Exercice 17 - Les navs</h2>
     <h3>Code html
-        <a id="bce16" onclick="CopyToClipboard('ex16')" class="btn btn-primary" href="#bce16">Cliquer pour copier le code</a>
+        <a id="bce17" onclick="CopyToClipboard('ex17')" class="btn btn-primary" href="#bce17">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex16">
+    <pre id="ex17">
     </pre>
-    <h3>Résultat</h3>
+    <h3>Résultat</h3> -->
 
     <a name="ce18"></a>
-    <h2>Exercice 18 - Les navs</h2>
+    <h2>Exercice 18 - Les navbars</h2>
     <h3>Code html
-        <a id="bce16" onclick="CopyToClipboard('ex16')" class="btn btn-primary" href="#bce16">Cliquer pour copier le code</a>
+        <a id="bce18" onclick="CopyToClipboard('ex18')" class="btn btn-primary" href="#bce18">Cliquer pour copier le code</a>
     </h3>
-    <pre id="ex16">
-    </pre>
+    <pre id="ex18">
+&#x3C;div class=&#x22;container-fluid&#x22;&#x3E;
+    &#x3C;nav class=&#x22;navbar navbar-expand-lg navbar-light bg-light&#x22;&#x3E;
+        &#x3C;a class=&#x22;navbar-brand&#x22; href=&#x22;#&#x22;&#x3E;
+            &#x3C;img class=&#x22;d-inline-block align-top&#x22; width=&#x22;30&#x22; height=&#x22;30&#x22; src=&#x22;https://static.thenounproject.com/png/88781-200.png&#x22; /&#x3E; My company&#x3C;/a&#x3E;
+        &#x3C;button class=&#x22;navbar-toggler&#x22; type=&#x22;button&#x22; data-toggle=&#x22;collapse&#x22; data-target=&#x22;#navbarContenu&#x22; aria-controls=&#x22;navbarContenu&#x22; aria-expanded=&#x22;false&#x22; aria-label=&#x22;Toggle navigation&#x22;&#x3E;
+            &#x3C;span class=&#x22;navbar-toggler-icon&#x22;&#x3E;&#x3C;/span&#x3E;
+        &#x3C;/button&#x3E;
+        &#x3C;div id=&#x22;navbarContenu&#x22; class=&#x22;collapse navbar-collapse&#x22;&#x3E;
+            &#x3C;ul class=&#x22;navbar-nav mr-auto&#x22;&#x3E;
+                &#x3C;li class=&#x22;nav-item active&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;index.html&#x22;&#x3E;Accueil&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;produits.html&#x22;&#x3E;Produits&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;about.html&#x22;&#x3E;A propos&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+                &#x3C;li class=&#x22;nav-item&#x22;&#x3E;&#x3C;a class=&#x22;nav-link&#x22; href=&#x22;contacts&#x22;&#x3E;Contacts&#x3C;/a&#x3E;&#x3C;/li&#x3E;
+            &#x3C;/ul&#x3E;
+            &#x3C;form class=&#x22;form-inline my-2 my-lg-0&#x22;&#x3E;
+                &#x3C;input class=&#x22;form-control mr-sm-2&#x22; type=&#x22;search&#x22; placeholder=&#x22;Rechercher produits&#x22; aria-label=&#x22;Rechercher produits&#x22;&#x3E;
+                &#x3C;button class=&#x22;btn btn-outline-success my-2 my-sm-0&#x22; type=&#x22;submit&#x22; aria-label=&#x22;Rechercher&#x22;&#x3E;Rechercher&#x3C;/button&#x3E;
+            &#x3C;/form&#x3E;
+        &#x3C;/div&#x3E;
+    &#x3C;/nav&#x3E;
+&#x3C;/div&#x3E;</pre>
     <h3>Résultat</h3>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="d-inline-block align-top" width="30" height="30" src="https://static.thenounproject.com/png/88781-200.png" /> My company</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenu" aria-controls="navbarContenu" aria-expanded="false" aria-label="Toggle navigation">                <span class="navbar-toggler-icon"></span>            </button>
+            <div id="navbarContenu" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contacts">Contacts</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Rechercher produits" aria-label="Rechercher produits">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit" aria-label="Rechercher">Rechercher</button>
+                </form>
+            </div>
+        </nav>
+    </div>
+
+
 
     <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->

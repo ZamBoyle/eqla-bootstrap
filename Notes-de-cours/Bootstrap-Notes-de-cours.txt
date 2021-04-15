@@ -87,10 +87,9 @@ XIX.	Les formulaires	28
 2.	Classe .form-control-file	29
 3.	Attribut readonly	29
 4.	Attribut readonly et la classe .form-control-plaintext	30
-XX.	Les navs	Erreur ! Signet non défini.
-XXI.	Les navbars	30
+XX.	Les navbars	30
 XXI. Les barres de progression	33
-XXII.	Les fenêtres modales	33
+XXI.	Les fenêtres modales	33
 
 
 

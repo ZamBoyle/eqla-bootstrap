@@ -6,11 +6,4 @@
 ?>
 <!-- Votre code HTML à mettre en-dessous -->
 
-
-
-
-
-
-
-
 <?php AddBottom(); ?>

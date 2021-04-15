@@ -1,0 +1,36 @@
+Exercice n°18 - Les menus de navigation (navbar)
+Cliquez pour aller à la correction.
+
+Nous allons créer un menu de navigation Bootstrap accessible et responsive. Let's go !
+
+1. Ouvrez dans VsCode la page Template.html
+2. Allez à la ligne n°18.
+3. Faites un div class='container-fluid'.
+4. Ouvrez une balise nav avec class="navbar navbar-expand-lg navbar-light bg-light"
+5. Ouvrez une balise a avec les attributs suivants class="navbar-brand" href="#"
+6. Ajoutez le texte: My company (Mettez le texte que vous voulez)
+7. Fermez la balise a.
+8. Ouvrez une balise button avec les attributs class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenu" aria-controls="navbarContenu" aria-expanded="false" aria-label="Toggle navigation"
+9. Ouvrez une balise span avec les attributs suivants class="navbar-toggler-icon"
+10. Fermez la balise span.
+11. Fermez la balise button.
+12. Ouvrez une balise div avec les attributs suivants id="navbarContenu" class="collapse navbar-collapse"
+13. Ouvrez une balise ul avec les attributs suivants class="navbar-nav mr-auto"(Le mr-auto est intéressant, il va mettre à droite le formulaire de recherche qui sera après le ul)
+14. Ouvrez une balise li avec class="nav-item active"
+15. Ouvrez une balise a avec les attributs suivants class="nav-link" href="index.html"
+16. Mettez le texte: Accueil
+17. Fermez la balise a
+18. Fermez la balise li
+19. Répétez les opérations du point 14 au point 18 pour avoir les autres points de menus suivants: Produits, A propos, Contacts
+20. Fermez la balise ul
+21. Ouvrez une balise form avec class="form-inline my-2 my-lg-0"(Le formulaire sera placé tout au bout à droite car on a mis auparavant sur notre ul la classe mr-auto)
+22. Ouvrez une balise input avec les attributs class="form-control mr-sm-2" type="search" placeholder="Rechercher produits" aria-label="Rechercher produits"
+23. Ouvrez une balise button avec les attributs class="btn btn-outline-success my-2 my-sm-0" type="submit"
+24. Fermez la balise button
+25. Fermez la balise form
+26. Fermez la balise div
+27. Fermez la balise nav
+28. Fermez la balise div
+29. Ouvrez une balise div avec class="container
+30. Centrez le titre 1 suivant: Bienvenue sur My Company !
+31. Ajoutez une description libre de votre société.
