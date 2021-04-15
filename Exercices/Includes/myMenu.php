@@ -5,12 +5,13 @@ function DisplayMenu($isFluid = true)
     <div class="' . ($isFluid  ? "container-fluid" : "container") . '">
             <nav class="navbar navbar-expand-lg navbar-light bg-light">
                 <a class="navbar-brand" href="#">
-                    <img class="d-inline-block align-top" width="30" height="30" src="https://static.thenounproject.com/png/88781-200.png" /> My company</a>
+                    <img class="d-inline-block align-top" width="30" height="30" src="https://static.thenounproject.com/png/88781-200.png" aria-label="Logo compagnie" /> My company</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenu" aria-controls="navbarContenu" aria-expanded="false" aria-label="Toggle navigation">                <span class="navbar-toggler-icon"></span>            </button>
                 <div id="navbarContenu" class="collapse navbar-collapse">
                     <ul class="navbar-nav mr-auto">'
         . GetItems() .
         '</ul>
+                    <i class="bi bi-cart mr-2 p-1 border"></i>
                     <form class="form-inline my-2 my-lg-0" action="search.php" method="post">
                         <input class="form-control mr-sm-2" type="search" placeholder="Rechercher produits" aria-label="Rechercher produits">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" aria-label="Rechercher">Rechercher</button>
