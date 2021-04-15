@@ -87,10 +87,10 @@ XIX.	Les formulaires	28
 2.	Classe .form-control-file	29
 3.	Attribut readonly	29
 4.	Attribut readonly et la classe .form-control-plaintext	30
-XX.	Les navs	30
+XX.	Les navs	Erreur ! Signet non défini.
 XXI.	Les navbars	30
-XXI. Les barres de progression	30
-XXII.	Les fenêtres modales	30
+XXI. Les barres de progression	33
+XXII.	Les fenêtres modales	33
 
 
 
@@ -860,15 +860,89 @@ Exemple :
 Ici le comportement sera identique : on ne saura pas interagir. Cependant la classe .form-control-plaintext supprime le bord du contrôle input. Donnant l’impression que c’est un simple texte. Mais si on clique dessus on voit apparaître les bordures du contrôle.
 Exemple :
 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="johnny.piette@gmail.com">
-
-
-XX. Les navs
-Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navs/
-
-
-XXI. Les navbars
+XX. Les navbars
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navbar/
-
+Les barres de navigations s’utilisent avec la balise <nav> d’html qui permet de faire d’afficher des liens de navigation.
+Tous les liens de navigations devront être à l’intérieur de la balise <nav> pir qu’ils soient bien lus pour les lecteurs d’écran. Maintenant, vous pouvez utiliser un <div> mais vous devrez ajouter l’attribut role="navigation" pour une meilleure accessibilité. Cette balise <nav> ou ce <div> auront comme classe .navbar.
+A l’intérieur nous pouvons avons plusieurs types d’éléments :
+1. .navbar-brand pour une société, un produit, un nom de projet.
+2. .navbar-nav pour le menu de navigation.
+3. .navbar-toggler qui affichera le bouton « sandwich » pour afficher nos menus si l’écran est trop petit.
+4. .form-inline pour afficher des contrôles de formulaire.
+5. .navbar-text pour ajouter du texte vertical centré.
+6. .collapse navbar-collapse pour reprouper des sous-menus.
+Commençons par afficher une barre de navigation simple avec le nom de notre marque :
+    <div class="container">
+      <h1>Navigation</h1>
+      <nav class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Bootstrap</a>
+      </nav>
+Ajoutons trois liens : Accueil, Produits, A propos, Contacts
+Pour cela, on commence à ajouter un <ul class="navbar-nav"> 
+Chaque élément de navigation sera un <li class="nav-item"> inclus évidemment dans le précédent <ul>.
+Le lien sera à l’intérieur du <li> sera de la forme <a class="nav-link" href="http://votreurl">Votre texte</a>
+Cela donne donc comme code html :
+<nav class="navbar navbar-light bg-light">
+    <div class="nav-brand">Navigation</div>
+    <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contacts">Contacts</a></li>
+    </ul>
+</nav>Alors, tout cela est très bien mais notre menu est affiché verticalement. Il est plus aisé de le voir s’afficher horizontalement. On ajoute donc à la balise <nav> la classe  navbar-expand-lg (on peut avoir -sm, -md, -lg et -xl).
+Notre code devient alors :
+<nav class="navbar navbar-light bg-light navbar-expand-lg">
+    <a class="navbar-brand" href="#">Bootstrap</a>
+    <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Accueil</a></li>
+        <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+        <li class="nav-item"><a class="nav-link" href="Contacts">Contacts</a></li>
+    </ul>
+</nav>Si notre menu est trop grand, il est intéressant de le réduire dans un bouton sandwich/burger.
+Pour cela après notre balise <nav> et notre marque (navbar-brand) nous ajoutons le code suivant :
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenu" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>Les balises <ul> et </ul> doivent être contenues dans un div ayant les classes .collapse et .navbar-collapse ayant un id par exemple id="navbarContenu". Le code devient le suivant :
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">Bootstrap</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenu" aria-controls="navbarContenu" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+    <div id="navbarContenu" class="collapse navbar-collapse">
+        <ul class="navbar-nav">
+            <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
+            <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+            <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+            <li class="nav-item"><a class="nav-link" href="Contacts">Contacts</a></li>
+        </ul>
+    </div>
+</nav>
+Alors j’ai ajouté au point de menu « Accueil » la classe .active. Ca met un peu en évidence notre lien en cours.
+Admettons que vous voudriez avoir une zone de recherche avec un bouton rechercher dans votre menu au bout à droite (en ajoutant la classe .mr-auto à la balise <ul> sinon elle sera collé aux autres éléments du menu.
+Il suffit d’ajouter le code suivant après la balise </ul> :
+<form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" placeholder="Produit à rechercher" aria-label="Produit à rechercher">
+    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+</form>Notre code final deviendra :
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">Bootstrap</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContenu" aria-controls="navbarContenu" aria-expanded="false" aria-label="Toggle navigation">                <span class="navbar-toggler-icon"></span>            </button>
+            <div id="navbarContenu" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active"><a class="nav-link" href="index.html">Accueil</a></li>
+                    <li class="nav-item"><a class="nav-link" href="produits.html">Produits</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">A propos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Contacts">Contacts</a></li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </nav>Votre menu soit vous mettez dans un div="container". De cette manière, il sera centré sur votre page.
+Ou bien, vous avez besoin d’utiliser toute la largeur de la page, dans ce cas on utilisera la classe .container-fluid. Notons que vous pouvez avoir pour le menu un div avec la classe container-fluid et un div pour le contenu avec la classe .container.
 
 
 
@@ -876,7 +950,7 @@ Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/navbar/
 XXI. Les barres de progression
 
 
-XXII. Les fenêtres modales
+XXI. Les fenêtres modales
 
 
 
