@@ -14,7 +14,7 @@ function DisplayMenu($isFluid = true)
         . GetItems() .
         '</ul>
                     <i class="bi bi-cart mr-2 p-1 border text-white" title="Panier"></i>
-                    <form class="form-inline my-2 my-lg-0" action="#" method="post">
+                    <form class="form-inline my-2 my-lg-0" action="search.php" method="post">
                         <input name="what" class="form-control mr-sm-2" type="search" placeholder="Rechercher produits" aria-label="Rechercher produits">
                         <button class="btn btn-outline-success my-2 my-sm-0" type="submit" aria-label="Rechercher">Rechercher</button>
                     </form>
