@@ -6,10 +6,10 @@ DisplayMenu();
 ?>
 <!-- Votre code HTML à mettre en-dessous -->
 <div class="container">
-    <div class="mt-2 jumbotron bg-dark text-white">
-        <h1>Hello</h1>
-        <p>Fiers de notre savoir faire, venez découvrir nos cupcakes faits avec Amour et Passion depuis déjà 20 ans.
-            C'est une histoire familiale où
+    <div class="mt-2 jumbotron bg-dark text-white text-justify">
+        <h2>Crazy Cupcakes</h2>
+        <p>Fiers de notre savoir faire, venez découvrir nos <span class="font-italic">Crazy Cupcakes</span> faits avec Amour et Passion depuis déjà 20 ans.
+            C'est une histoire familiale que vous pourrez <a href="about.php">découvrir</a>.
         </p>
         <div id="monCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
             <div class="carousel-inner">
