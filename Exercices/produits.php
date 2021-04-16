@@ -1,7 +1,9 @@
 <?php include "./Includes/mybootstrap.php"; ?>
 <?php include "./Includes/myMenu.php"; ?>
 <?php
-AddTop("Page des produits");
+//On ajoute le titre "Page des produits" de la page et on envoie du code html, ici un code js
+AddTop("Page des produits","<script>console.log('Message envoyé dans la console JS');</script>");
+//On affiche le menu Bootstrap
 DisplayMenu();
 ?>
 <!-- Votre code HTML à mettre en-dessous -->
@@ -42,4 +44,5 @@ DisplayMenu();
         <button class="btn btn-primary" aria-label="Ajouter au panier"><i class="bi bi-cart"></i> Ajouter</button>
     </div>
 </div>
+<!-- On ajoute le bas de la page avec éventuellement du html supplémentaire à passer en paramètre: ici on envoie rien. -->
 <?php AddBottom(); ?>

@@ -27,10 +27,13 @@ function AddTop($title, $myHead = "")
 
 /**
  * Ajoute le bas de la page: depuis </body> jusqu'à </html>
+ * 
+ * $myBottom code HTML à éventuellement ajouter juste avant </body>
  */
-function AddBottom()
+function AddBottom($myBottom = "")
 {
     AddJS();
+    echo $myBottom;
     ?>
     </body>
 
