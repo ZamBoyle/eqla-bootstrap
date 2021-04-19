@@ -1,4 +1,5 @@
 <?php
+include "./Includes/myMenu.php";
 
 /**
  * Ajoute le top de la page: depuis <!DOCTYPE html> jusqu'à <body>
@@ -17,12 +18,14 @@ function AddTop($title, $myHead = "")
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php AddCSS(); ?>
+        <link rel="stylesheet" href="./css/site.css">                
         <?php echo $myHead; ?>
         <title><?php echo $title ?></title>
     </head>
 
     <body>
     <?php
+        DisplayMenu();
 }
 
 /**

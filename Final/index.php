@@ -1,41 +1,30 @@
-<?php include "./Includes/mybootstrap.php"; ?>
-<?php include "./Includes/myMenu.php"; ?>
 <?php
-AddTop("Page d'accueil");
-DisplayMenu();
+include "./Includes/page.php";
+include "./Includes/productsData.php";
+include "./Includes/utils.php";
+
+$db = new ProductsDB();
+$db->Products = array();
+
+//On ajoute le titre "Page des produits" de la page et on envoie du code html, ici un code js qui fait coucou à la console
+AddTop("Page d'accueil", "<script>console.log('Message envoyé dans la console JS depuis le <HEAD>');</script>");
 ?>
 <!-- Votre code HTML à mettre en-dessous -->
 <div class="container">
-    <div class="mt-2 jumbotron bg-dark text-white text-justify">
+    <div class="jumbotron bg-dark text-white text-justify mt-2">
         <h2>Crazy Cupcakes</h2>
         <p>Fiers de notre savoir faire, venez découvrir nos <span class="font-italic">Crazy Cupcakes</span> faits avec Amour et Passion depuis déjà 20 ans.
             C'est une histoire familiale que vous pourrez <a href="about.php">découvrir</a>.
         </p>
-        <div id="monCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="img-fluid w-50" src="./Images/cupcake1.jpg" alt="Los Angeles, arrivée d'un groupe sur scène."> Le Pinky <a href="">plus de photos</a>.
-                </div>
-                <div class="carousel-item">
-                    <img class="img-fluid w-25" src="./Images/cupcake2.jpg" alt="chicago, image d'un chanteur sur scène avec une guitare.">
-                </div>
-                <div class="carousel-item">
-                    <img class="img-fluid w-50" src="./Images/cupcake3.jpg" alt="New-York, image dans la foule en direction de la scène.">
-                </div>
-                <div class="carousel-item">
-                    <img class="img-fluid w-50" src="./Images/cupcake3.jpg" alt="New-York, image dans la foule en direction de la scène.">
-                </div>
-            </div>
-            <!-- Contrôles Précédent et Suivant -->
-            <a class="carousel-control-prev" href="#monCarousel" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Précédent</span>
-            </a>
-            <a class="carousel-control-next" href="#monCarousel" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Suivant</span>
-            </a>
-        </div>
+        <?php DisplayCarousel((new ProductsDB())->Products); ?>
     </div>
 </div>
-<?php AddBottom(); ?>
+
+<!-- On ajoute le bas de la page avec éventuellement du html supplémentaire à passer en paramètre -->
+<?php AddBottom(
+    "<div class='position-absolute mr-1'  style='bottom:0; right:0;'>
+        <hr class='mb-0'/>
+        (c) 2021 <img class='d-inline-block mb-1' height='15' src='./Images/logo.png' aria-label='Logo compagnie' /> <span class='font-italic'>Crazy Cupcakes</span>
+    </div>"
+);
+?>
