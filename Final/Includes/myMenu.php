@@ -48,7 +48,6 @@ function GetItems()
 
 function IsActive($url)
 {
-    $pageName = strtolower($_SERVER['SCRIPT_NAME']);
-    $myUrl = strtolower($url);
-    return stripos($pageName, $myUrl) !== false ? " active":""; 
+    $pageName = $_SERVER['SCRIPT_NAME'];
+    return stripos($pageName, $url) !== false ? " active":""; 
 }
