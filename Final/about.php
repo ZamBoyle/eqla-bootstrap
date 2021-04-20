@@ -20,4 +20,4 @@ AddTop("Notre histoire");
     </div>
 </div>
 
-<?php AddBottom("<script src='../js/site.js'></script>"); ?>
+<?php AddBottom(); ?>
