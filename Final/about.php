@@ -14,7 +14,7 @@ AddTop("Notre histoire");
     </div>
     <div class='d-inline-block my-1 p-2 bg-light border rounded text-justify'>
         <h2>D'où est venu ce nom <span class='font-weight-bold font-italic'>Crazy Cupcakes</span> ?</h2>
-        <img class='img-fluid img-thumbnail product float-left mr-2' src='./Images/cupcakefist.jpg' aria-label='Image du premier CupCake !'>
+        <img class='img-fluid img-thumbnail product float-left mr-2' src='./Images/cupcakefist.jpg' aria-label='Image du premier CupCake avec un poing à manger dressé vers le haut !' title>
         <p>Auguste Cupcake créa le premier cupcake lorsqu'il voulu faire rentrer son gâteau dans sa tasse de café à l'aide de son poing: une idée un peu folle/crazy !</p>
         <p>De là est né <span class='font-weight-bold font-italic'>Crazy Cupcakes</span> !</p>
     </div>

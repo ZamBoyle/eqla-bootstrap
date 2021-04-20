@@ -1,6 +1,6 @@
 <?php
 
-
+//TO DO: Pour la recherche pour montrer un exemple avec les Table Bootstrap.
 function DisplayProductsInTable($products):void{
     
 }

@@ -41,13 +41,16 @@ function GetItems()
 {
     $lis = "";
     foreach (GetPages() as $page => $url) {
-        $lis .= "<li class='nav-item " . IsActive($url) . "'><a class='nav-link' href='$url'>$page </a></li>";
+        $active = IsActive($url);
+        $sronly = ($active == "active") ? '<span class="sr-only">(courant)</span></a></li>' : "";
+        $lis .= "<li class='nav-item $active'><a class='nav-link' href='$url'>$page $sronly</a></li>";
     }
     return $lis;
 }
 
 function IsActive($url)
 {
-    $pageName = $_SERVER['SCRIPT_NAME'];
-    return stripos($pageName, $url) !== false ? " active":""; 
+    $pageName = basename($_SERVER['SCRIPT_NAME']);
+    return stripos($pageName, $url) !== false ? "active" : "";
 }
+?>
