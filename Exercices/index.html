@@ -45,6 +45,9 @@
             <li><a href="#ex17.1" class="text-decoration-none"> Exercice n°17.1 - Les formulaires: Les form-group</a></li>
             <li><a href="#ex17.2" class="text-decoration-none"> Exercice n°17.2 - Les formulaires: Les form-group (Devoir)</a></li>
             <li><a href="#ex18" class="text-decoration-none"> Exercice n°18 - Les menus de navigation (navbar)</a></li>
+            <li><a href="#ex19" class="text-decoration-none"> Exercice n°19 - Les alertes</a></li>
+            <li><a href="#ex20" class="text-decoration-none"> Exercice n°20 - Les icônes Bootstrap</a></li>
+            <li><a href="#exFinal" class="text-decoration-none"> Exercice Final - Site web Bootstrap avec menu réutilisable en PHP</a></li>
         </ul>
         <hr/>
     </div>
@@ -436,7 +439,6 @@
         <ol>
             <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
             <li>Allez à la ligne n°18.</li>
-            <li>Faites un <code>div class='container-fluid'</code>.</li>
             <li>Ouvrez une balise <code>nav</code> avec <code>class="navbar navbar-expand-lg navbar-light bg-light"</code>
             </li>
             <li>Ouvrez une balise <code>a</code> avec les attributs suivants <code>class="navbar-brand" href="#"</code></li>
@@ -458,15 +460,141 @@
             <li>Ouvrez une balise <code>form</code> avec <code>class="form-inline my-2 my-lg-0"</code>(Le formulaire sera placé tout au bout à droite car on a mis auparavant sur notre <code>ul</code> la classe <code>mr-auto</code>)</li>
             <li>Ouvrez une balise <code>input</code> avec les attributs <code>class="form-control mr-sm-2" type="search" placeholder="Rechercher produits" aria-label="Rechercher produits"</code></li>
             <li>Ouvrez une balise <code>button</code> avec les attributs <code>class="btn btn-outline-success my-2 my-sm-0" type="submit"</code></li>
+            <li>Mettez le texte: Rechercher</li>
             <li>Fermez la balise <code>button</code></li>
             <li>Fermez la balise <code>form</code></li>
             <li>Fermez la balise <code>div</code></li>
             <li>Fermez la balise <code>nav</code></li>
             <li>Fermez la balise <code>div</code></li>
-            <li>Ouvrez une balise <code>div</code> avec <code>class="container</code></li>
             <li>Centrez le titre 1 suivant: Bienvenue sur My Company !</li>
             <li>Ajoutez une description libre de votre société.</li>
         </ol>
+
+        <a name="ex19"></a>
+        <h2>Exercice n°19 - Les alertes</h2>
+        <p>Vous allez créer 3 alertes différentes:</p>
+        <ol>
+            <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
+            <li>Allez à la ligne n°18.</li>
+            <li>Créez une alerte success avec le texte suivant: L'utilisateur a été créé avec succès.</li>
+            <li>Créez une alerte warning avec le texte suivant: Nom d'utilisateur déjà utilisé, veuillez changer svp !</li>
+            <li>Créez une alerte danger avec le texte suivant: Impossible de contacter la base de données !</li>
+        </ol>
+
+        <a name="ex20"></a>
+        <h2>Exercice n°20 - Les icônes Bootstrap</h2>
+        <ol>
+            <li>Ouvrez dans VsCode la page <a href="./Templates/Template.html" class="text-decoration-none" download="Template.html"> Template.html</a></li>
+            <li>Allez à la ligne n°18.</li>
+            <li>Créez un bouton de couleur primary avec l'icône d'une maison et le texte Accueil.</li>
+            <li>Créez un bouton de couleur light avec l'icône d'une enveloppe et le texte Contact.</li>
+            <li>Créez un bouton de couleur success avec une icône d'un calendrier et le texte Agenda.</li>
+        </ol>
+
+        <a name="exFinal"></a>
+        <h2>Exercice Final - Site web Bootstrap avec menu réutilisable en PHP</h2>
+        <!-- <p>Cliquez pour aller à la <a href="../Exercices-Corrections/index.html#ce17.2">correction</a>.</p> -->
+        <div class="text-justify">
+            <p>Vous allez devoir faire un site Bootstrap qui ressemblera au site Internet <a href="http://eqla.ddns.net/bootstrap/Final/" aria-label="Lien vers l'exercice final">suivant</a>.</p>
+            <p>Le contenu de votre site sera identique. Les fichiers nécessaires (images et un fichier css) vous seront transmis.</p>
+            <p>Le site sera fait en PHP pour pouvoir utiliser votre menu en PHP de page en page et que la page encours soit sélectionnée dans le menu.</p>
+            <p>Bien entendu, vous pourriez regarder le code source du site de référence mais essayez de le faire vous-même. C'est en se trompant et en pestant qu'on apprend le plus.</p>
+            <p>Testez et faites tester votre site sur un ordinateur de bureau et sur un téléphone.</p>
+            <p>Comparez votre site et le site de référence et faites comparer votre site et le site de référence.</p>
+            <h3>Structure de l'arborescence des fichiers</h3>
+            <p>Votre site devra suivre cette arborescence pour l'ensemble de vos fichiers.</p>
+            <ol>
+                <li>/about.php</li>
+                <li>/contacts.php</li>
+                <li>/index.php</li>
+                <li>/products.php</li>
+                <li>/search.php</li>
+                <li>/css/site.css (Plus ceux de Bootstrap si vous préférez)</li>
+                <li>/Images/cupcake1.jpg</li>
+                <li>/Images/cupcake2.jpg</li>
+                <li>/Images/cupcake3.jpg</li>
+                <li>/Images/cupcake4.jpg</li>
+                <li>/Images/cupcake5.jpg</li>
+                <li>/Images/cupcakefist.jpg</li>
+                <li>/Images/logo.png</li>
+                <li>/Includes/menu.php</li>
+                <li>/js/ (Si vous préférez télécharger les fichiers js localement)</li>
+
+            </ol>
+            <h3>Le menu</h3>
+            <ol>
+                <li>Il aura un bakground dark.</li>
+                <li>Il ne sera pas contenu dans un div: inséré directement après la balise body.</li>
+                <li>Vous mettrez comme nom de société: Crazy Cupcakes</li>
+                <li>A gauche du nom de la société, vous mettrez l'image logo.png ayant une largeur et hauteur de 30.</li>
+                <li>Accueil = index.php</li>
+                <li>Cupcakes = products.php</li>
+                <li>A propos = about.php</li>
+                <li>Contacts = contacts</li>
+                <li>Le bouton du formulaire de recherche amène sur la page search.php</li>
+            </ol>
+
+            <h3>Les images de Cupcakes</h3>
+            <ol>
+                <li>Elles sont au nombre de 6. Allant de cupcake1.jpg à cupcake5.jpg ainsi que cupcakefist.jpg</li>
+                <li>Elles seront responsives.</li>
+                <li>Elles auront un bord blanc (thumbnail)</li>
+                <li>Elles appliqueront une classe définie dans le fichier site.css</li>
+                <li>Elles auront un margin right de 2.</li>
+                <li>Elles auront un aria-label.</li>
+            </ol>
+            <h3>Pour toutes les pages</h3>
+            <ol>
+                <li>Il y un div avec une classe .container</li>
+                <li>Il y a un margin top de 2 avant d'afficher le contenu.</li>
+                <li>Le texte des paragraphes est justifié.</li>
+            </ol>
+
+            <h3>Page Accueil - index.php</h3>
+            <ol>
+                <li>Le texte est blanc.</li>
+                <li>Le titre 'Crazy Cupcakes' est en titre 2 à gauche.</li>
+                <li>Affichera le texte de la page de référence en justifié.</li>
+                <li>Affichera un caroussel de cupcakes avec les images fournies.</li>
+                <li>Texte et caroussel sont mis dans un jumbotron de background dark.</li>
+                <li>Dans le coin inférieur droit de l'écran: (c) 2021 Crazy Cupcakes </li>
+                <li>Dans l'étape précédente, mettre logo.png entre 2021 et Crazy. L'image aura une hauteur de 15.</li>
+            </ol>
+
+            <h3>Page Cupcakes - products.php</h3>
+            <p>Cette page va afficher nos 5 produits en respectant bien le canevas suivant:</p>
+            <ol>
+                <li>Affichera le texte de la page de référence.</li>
+                <li>Le titre 1 est centré et a un margin top et bottom de 1.</li>
+                <li>Les étapes suivantes vont décrire comment est présenté un produit.</li>
+                <li>Chaque produit sera mis dans un div ayant la classe suivante: class="d-inline-block my-1 p-2 bg-light border rounded"</li>
+                <li>Il y a un titre 2 ayant comme texte le nom du cupcake</li>
+                <li>Une image du cupcake</li>
+                <li>Le texte de description du cupcake se met à droite de l'image (donc pas en-dessous de l'image !)</li>
+                <li>On affiche, une liste de tags</li>
+                <li>On affiche le stock</li>
+                <li>Il y a un bouton avec une icône de panier à l'intérieur avec un texte dépendant du stock:</li>
+                <li>Si Stock > 0, le boutton sera de couleur primary avec le texte Ajouter</li>
+                <li>Sinon le bouton sera de couleur warning avec le texte Indisponible et le bouton est désactivé</li>
+            </ol>
+
+            <h3>La page A propos - about.php</h3>
+
+            <h3>La page Contact - contacts.php</h3>
+            <ol>
+                <li>Affichera le texte de la page de référence.</li>
+                <li>Toutes les icônes citées sont des icônes Bootstrap.</li>
+            </ol>
+
+            <h3>La page Recherche - search.php</h3>
+            <ol>
+                <!--                 <li>Affichera le texte de la page de référence.</li> -->
+                <li>TO DO.</li>
+            </ol>
+
+
+        </div>
+
 
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     </div>

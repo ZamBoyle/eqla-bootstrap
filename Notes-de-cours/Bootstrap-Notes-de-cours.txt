@@ -88,8 +88,8 @@ XIX.	Les formulaires	28
 3.	Attribut readonly	29
 4.	Attribut readonly et la classe .form-control-plaintext	30
 XX.	Les navbars	30
-XXI. Les barres de progression	33
-XXI.	Les fenêtres modales	33
+XXI.	Les alertes	33
+XXII.	Les icones Bootstrap	33
 
 
 
@@ -946,12 +946,46 @@ Ou bien, vous avez besoin d’utiliser toute la largeur de la page, dans ce cas 
 
 
 
-XXI. Les barres de progression
+XXI. Les alertes
+Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/alerts/
+Bootstrap fournit un système d’alerte. On entend par alerte un message encadré avec un background. Les classes pour ces alertes sont :
+- alert-primary
+- alert-secondary
+- alert-success
+- alert-danger
+- alert-warning
+- alert-info
+- alert-light
+- alert-dark
+Exemples : 
+<div class="alert alert-success" role="alert">
+	L’utilisateur a été créé avec succès !
+</div>
 
+<div class="alert alert-warning" role="alert">
+	Certains champs n’ont pas été remplis !
+</div>
 
-XXI. Les fenêtres modales
+<div class="alert alert-danger" role="alert">
+	Erreur : Impossible de se connecter à la base de données. Veuillez patienter.
+</div>
+
+XXII. Les icones Bootstrap
+Sur le site Bootstrap : https://icons.getbootstrap.com/
+Bootstrap fournit un ensemble d’icônes prêtes à l’emploi. Il y a un moteur de recherches pour trouver une icône. Vous n’êtes pas obligés de l’utiliser qu’avec Bootstrap. Ces icônes peuvent être utilisées sans Bootstrap.
+Ces icônes dépannent dans pas mal de situations mais si vous avez vraiment besoin d’icônes non listées allez voir sur le site Font Awesome : https://fontawesome.com/ Vous avez les icônes gratuites et payantes. Site à retenir !
+Il y a deux techniques pour ajouter les icônes de Bootstrap dans notre page :
+- Il faut pour cela ajouter dans notre page web le lien vers le fichier css : <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
+- Ou directement dans un fichier css de notre site : @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
 
-
+Exemples d’utilisation : une icône d’un panier, une icône de Facebook, une icône d’une poubelle
+<i class="bi bi-cart" role="img" aria-label="Panier"></i>
+<i class="bi bi-facebook" role="img" aria-label="Facebook"></i>
+<i class="bi bi-trash" role="img" aria-label="Poubelle"></i>
+Exemple d’un bouton avec une icône d’une lettre et « Contacter Eqla » 
+<a href="https://eqla.be/contact/" class="btn btn-default btn-primary"><i class="bi bi-envelope"></i> Contacter Eqla </a>
+Exemple d’un bouton de suppression d’un utilisateur :
+<a href="http://UrlPourSupprimer" class="btn btn-default btn-danger  align-middle"><i class="bi bi-person-dash-fill align-middle"></i><span class="align-middle"> Supprimer</span> </a>
 
 
 

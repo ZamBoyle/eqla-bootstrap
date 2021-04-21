@@ -25,7 +25,7 @@ class Product
         $btnText = $this->Stock > 0 ? "Ajouter" : "Indisponible";
 
         echo "
-        <div class='d-inline-block my-1 p-2 bg-light border rounded text-justify'>
+        <div class='d-inline-block my-1 p-2 bg-light border rounded'>
         <h2>$this->Name</h2>
         <img class='img-fluid img-thumbnail product float-left mr-2' src='./Images/$this->ImageName' aria-label='Une image de Cupcake: $this->Name'>
         <p>$this->Description.</p>
