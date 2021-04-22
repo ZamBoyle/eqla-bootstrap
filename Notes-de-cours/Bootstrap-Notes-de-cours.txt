@@ -89,7 +89,10 @@ XIX.	Les formulaires	28
 4.	Attribut readonly et la classe .form-control-plaintext	30
 XX.	Les navbars	30
 XXI.	Les alertes	33
-XXII.	Les icones Bootstrap	33
+1.	Les classes	33
+2.	Les liens	33
+3.	Bouton Close	33
+XXII.	Les icones Bootstrap	34
 
 
 
@@ -918,8 +921,8 @@ Pour cela après notre balise <nav> et notre marque (navbar-brand) nous ajouton
         </ul>
     </div>
 </nav>
-Alors j’ai ajouté au point de menu « Accueil » la classe .active. Ca met un peu en évidence notre lien en cours.
-Admettons que vous voudriez avoir une zone de recherche avec un bouton rechercher dans votre menu au bout à droite (en ajoutant la classe .mr-auto à la balise <ul> sinon elle sera collé aux autres éléments du menu.
+Alors j’ai ajouté au point de menu « Accueil » la classe .active. Ça met un peu en évidence notre lien en cours.
+Admettons que vous voudriez avoir une zone de recherche avec un bouton rechercher dans votre menu au bout à droite (en ajoutant la classe .mr-auto à la balise <ul> sinon elle sera collée aux autres éléments du menu.
 Il suffit d’ajouter le code suivant après la balise </ul> :
 <form class="form-inline my-2 my-lg-0">
     <input class="form-control mr-sm-2" type="search" placeholder="Produit à rechercher" aria-label="Produit à rechercher">
@@ -944,10 +947,9 @@ Il suffit d’ajouter le code suivant après la balise </ul> :
 Ou bien, vous avez besoin d’utiliser toute la largeur de la page, dans ce cas on utilisera la classe .container-fluid. Notons que vous pouvez avoir pour le menu un div avec la classe container-fluid et un div pour le contenu avec la classe .container.
 
 
-
-
 XXI. Les alertes
 Sur le site Bootstrap : https://getbootstrap.com/docs/4.6/components/alerts/
+1. Les classes
 Bootstrap fournit un système d’alerte. On entend par alerte un message encadré avec un background. Les classes pour ces alertes sont :
 - alert-primary
 - alert-secondary
@@ -957,19 +959,36 @@ Bootstrap fournit un système d’alerte. On entend par alerte un message encadr
 - alert-info
 - alert-light
 - alert-dark
-Exemples : 
+Exemples : 3 alertes
 <div class="alert alert-success" role="alert">
 	L’utilisateur a été créé avec succès !
 </div>
-
 <div class="alert alert-warning" role="alert">
 	Certains champs n’ont pas été remplis !
 </div>
-
 <div class="alert alert-danger" role="alert">
 	Erreur : Impossible de se connecter à la base de données. Veuillez patienter.
-</div>
-
+</div>
+2. Les liens
+Si vous mettez un lien hypertexte dans une alerte, on utilise la classe .alert-link. Cette classe adaptera la couleur en fonction de la couleur de l’alerte.
+Exemple :
+<div class="alert alert-primary" role="alert">
+  Une simple alerte primary <a href="#" class="alert-link">an example link</a>. Cliquez si vous avez envie.
+</div>
+3. Bouton Close
+On peut faire apparaître un bouton permettant de faire disparaître notre alerte. C’est utile quand on veut en haut du page afficher une information qu’on peut éventuellement fermer à l’aide d’un bouton.
+Pour cela on ajouter la classe . alert-dismissible.
+
+Exemple : Alerte avec un bouton de fermeture
+    <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>Hey !</strong> Tu devrais vérifier quelques champs du formulaire.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">x</span>
+        </button>
+    </div>On utilise un span avec x comme texte pour indiquer la fermeture. Vous pouvez aussi rencontrer comme texte  &times; (signe de multiplication). Ça ressemble aussi à un x . Choisissez ! 😊
+L’exemple précédent montre que si l’on veut avoir un effet de fondu quand on ferme l’alerte, il faut ajouter deux classes : fade show.
+Alerte avec contenu
+On peut structurer le contenu de notre alerte et en ajoutant par exemple des titres 1, 2, 3, etc. Mais il faut alors ajouter à la balise de titre (h1, h2, etc) la classe alert-heading Ca mettra une couleur de titre proche de la couleur du contenu de l’alerte. Si vous avez une alert-success, le titre sera d’un vert foncé.
 XXII. Les icones Bootstrap
 Sur le site Bootstrap : https://icons.getbootstrap.com/
 Bootstrap fournit un ensemble d’icônes prêtes à l’emploi. Il y a un moteur de recherches pour trouver une icône. Vous n’êtes pas obligés de l’utiliser qu’avec Bootstrap. Ces icônes peuvent être utilisées sans Bootstrap.
@@ -977,7 +996,6 @@ Ces icônes dépannent dans pas mal de situations mais si vous avez vraiment bes
 Il y a deux techniques pour ajouter les icônes de Bootstrap dans notre page :
 - Il faut pour cela ajouter dans notre page web le lien vers le fichier css : <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
 - Ou directement dans un fichier css de notre site : @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css");
-
 Exemples d’utilisation : une icône d’un panier, une icône de Facebook, une icône d’une poubelle
 <i class="bi bi-cart" role="img" aria-label="Panier"></i>
 <i class="bi bi-facebook" role="img" aria-label="Facebook"></i>
@@ -986,11 +1004,6 @@ Exemple d’un bouton avec une icône d’une lettre et « Contacter Eqla » 
 <a href="https://eqla.be/contact/" class="btn btn-default btn-primary"><i class="bi bi-envelope"></i> Contacter Eqla </a>
 Exemple d’un bouton de suppression d’un utilisateur :
 <a href="http://UrlPourSupprimer" class="btn btn-default btn-danger  align-middle"><i class="bi bi-person-dash-fill align-middle"></i><span class="align-middle"> Supprimer</span> </a>
-
-
-
-
-
 
 21
 
