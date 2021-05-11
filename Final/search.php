@@ -1,7 +1,7 @@
 <?php
 include "./Includes/page.php";
-include "./Includes/productsData.php";
-include "./Includes/utils.php";
+include "./Includes/DAL/productsData.php";
+include "./Includes/Utils/utils.php";
 
 AddTop("Recherche");
 
