@@ -1,19 +1,22 @@
 <?php
+require_once("./Includes/DAL/productsData.php");
 
 //TO DO: Pour la recherche pour montrer un exemple avec les Table Bootstrap.
-function DisplayProductsInTable($products):void{
-    
+function DisplayProductsInTable($products): void
+{
 }
 
-function DisplayProducts($products):void{
+function DisplayProducts($products): void
+{
     foreach ($products as $product) {
         $product->DisplayProduct();
     }
 }
 
-function DisplayCarouselItems(){
+function DisplayCarouselItems()
+{
     $productsDB = new ProductsDB();
-    $cpt=0;
+    $cpt = 0;
     foreach ($productsDB->Products as $product) {
         $active = $cpt++ == 0 ? " active" : "";
         echo "
@@ -24,8 +27,23 @@ function DisplayCarouselItems(){
     }
 }
 
-function DisplayCarousel(){
-    ?>
+function DisplayPromo(string $promo, bool $center=false)
+{
+    $textCenter = $center ? "text-center": "";
+?>
+    <div class="alert alert-warning alert-dismissible fade show mb-0 <?php echo $textCenter ?>" role="alert">
+        <?php echo $promo; ?>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">x</span>
+        </button>
+    </div>
+<?php
+}
+
+
+function DisplayCarousel()
+{
+?>
     <div id="monCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
         <div class="carousel-inner text-center">
             <?php DisplayCarouselItems(); ?>
@@ -37,9 +55,9 @@ function DisplayCarousel(){
         </a>
         <a class="carousel-control-next" href="#monCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span  class="sr-only">Suivant</span>
+            <span class="sr-only">Suivant</span>
         </a>
     </div>
-    <?php
+<?php
 }
 ?>

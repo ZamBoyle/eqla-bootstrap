@@ -1,10 +1,10 @@
-<?php
-include "./Includes/page.php";
-include "./Includes/productsData.php";
-include "./Includes/utils.php";
+<?php require_once("./Includes/page.php"); ?>
+<?php require_once("./Includes/DAL/productsData.php"); ?>
+<?php require_once("./Includes/Utils/utils.php"); ?>
 
-AddTop("Page des produits");
-?>
+<?php DisplayPromo("<strong>PROMO !!</strong> 3 cupcakes achetés = 4 cupcakes reçus !", true); ?>
+<?php AddTop("Page des produits");?>
+
 <!-- Votre code HTML à mettre en-dessous -->
 <div class="container my-1 rounded text-justify    ">
     <h1 class="text-center">Produits - Cupcakes</h1>

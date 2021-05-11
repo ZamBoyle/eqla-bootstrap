@@ -1,5 +1,5 @@
 <?php
-include "./Includes/menu.php";
+require_once("./Includes/menu.php");
 
 /**
  * Ajoute le top de la page: depuis <!DOCTYPE html> jusqu'à <body>

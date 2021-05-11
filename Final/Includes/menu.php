@@ -49,6 +49,6 @@ function GetItems()
 function IsActive($url)
 {
     $pageName = basename($_SERVER['SCRIPT_NAME']);
-    return strcasecmp($url, $pageName) == 0 ? "active" : ""; //strcasecmp   fonction qui compare si deux chaînes sont égales: en ignorant la case. Elle retourne si les chaînes sont égales.
+    return strcasecmp($url, $pageName) == 0 ? "active" : ""; //strcasecmp   fonction qui compare si deux chaînes sont égales: en ignorant la casse. Elle retourne si les chaînes sont égales.
 }
 ?>

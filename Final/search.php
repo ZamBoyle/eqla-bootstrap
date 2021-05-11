@@ -4,6 +4,7 @@ include "./Includes/productsData.php";
 include "./Includes/utils.php";
 
 AddTop("Recherche");
+
 ?>
 <div class="container bg-light">
     <h1>Recherche de produits</h1>
@@ -76,7 +77,7 @@ function DisplaySearchForm()
 ?>
     <form action="search.php" method="post">
         <div class="form-group">
-            <input name="what" type="text" class="form-control" id="searchInput" aria-describedby="Zone de rechercher" placeholder="Que recherchez-vous ?" required>
+            <input name="what" type="text" class="form-control" id="searchInput" aria-describedby="Zone de rechercher" placeholder="Que recherchez-vous ?" required value='<?php echo $_POST["what"]; ?>'>
         </div>
         <div class="form-row">
             <div class="col">

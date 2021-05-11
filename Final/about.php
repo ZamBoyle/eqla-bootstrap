@@ -1,8 +1,6 @@
 <?php include "./Includes/page.php"; ?>
-<?php include "./Includes/productsData.php"; ?>
-<?php
-AddTop("Notre histoire");
-?>
+
+<?php AddTop("Notre histoire"); ?>
 
 <div class="container bg-light mt-2 border rounded">
     <h1 class="text-center">Notre Histoire</h1>

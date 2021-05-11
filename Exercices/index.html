@@ -498,8 +498,8 @@
         <div class="text-justify">
             <p>Vous allez devoir faire un site Bootstrap qui ressemblera au site Internet <a href="http://eqla.ddns.net/bootstrap/Final/" aria-label="Lien vers l'exercice final">suivant</a>.</p>
             <p>Le contenu de votre site sera identique. Les fichiers nécessaires (images et un fichier css) vous seront transmis.</p>
-            <p>Le site sera fait en PHP pour pouvoir utiliser votre menu en PHP de page en page et que la page encours soit sélectionnée dans le menu.</p>
-            <p>Bien entendu, vous pourriez regarder le code source du site de référence mais essayez de le faire vous-même. C'est en se trompant et en pestant qu'on apprend le plus.</p>
+            <p>Le site sera fait en PHP pour pouvoir utiliser votre menu en PHP de page en page et que la page en cours soit sélectionnée dans le menu.</p>
+            <p>Bien entendu, vous pourriez regarder le code source HTML du site de référence mais essayez de le faire vous-même. C'est en se trompant et en pestant qu'on apprend le plus.</p>
             <p>Testez et faites tester votre site sur un ordinateur de bureau et sur un téléphone.</p>
             <p>Comparez votre site et le site de référence et faites comparer votre site et le site de référence.</p>
             <h3>Structure de l'arborescence des fichiers</h3>
@@ -540,7 +540,7 @@
                 <li>Elles sont au nombre de 6. Allant de cupcake1.jpg à cupcake5.jpg ainsi que cupcakefist.jpg</li>
                 <li>Elles seront responsives.</li>
                 <li>Elles auront un bord blanc (thumbnail)</li>
-                <li>Elles appliqueront une classe définie dans le fichier site.css</li>
+                <li>Elles appliqueront une classe définie dans le fichier site.css à savoir la classe .product</li>
                 <li>Elles auront un margin right de 2.</li>
                 <li>Elles auront un aria-label.</li>
             </ol>
@@ -565,9 +565,12 @@
             <h3>Page Cupcakes - products.php</h3>
             <p>Cette page va afficher nos 5 produits en respectant bien le canevas suivant:</p>
             <ol>
+                <li>Affichera tout en haut de la page, avant le menu, une alerte avec une promotion: PROMO !! 3 cupcakes achetés = 4 cupcakes reçus !</li>
+                <li>La couleur de l'alerte sera du type alert-warning.</li>
+                <li>Il sera possible de fermer cette alerte.</li>
                 <li>Affichera le texte de la page de référence.</li>
                 <li>Le titre 1 est centré et a un margin top et bottom de 1.</li>
-                <li>Les étapes suivantes vont décrire comment est présenté un produit.</li>
+                <li>Les étapes suivantes vont décrire comment est présenté un produit:</li>
                 <li>Chaque produit sera mis dans un div ayant la classe suivante: class="d-inline-block my-1 p-2 bg-light border rounded"</li>
                 <li>Il y a un titre 2 ayant comme texte le nom du cupcake</li>
                 <li>Une image du cupcake</li>
@@ -580,7 +583,7 @@
             </ol>
 
             <h3>La page A propos - about.php</h3>
-
+            <p>Affichera le texte de la page de référence.</p>
             <h3>La page Contact - contacts.php</h3>
             <ol>
                 <li>Affichera le texte de la page de référence.</li>
@@ -588,12 +591,8 @@
             </ol>
 
             <h3>La page Recherche - search.php</h3>
-            <ol>
-                <!--                 <li>Affichera le texte de la page de référence.</li> -->
-                <li>TO DO.</li>
+            <p>N'y faites rien, je vous montrerai cette partie recherche en PHP dans un cours de rattrapage.</p>
             </ol>
-
-
         </div>
 
 

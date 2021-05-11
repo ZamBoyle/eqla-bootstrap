@@ -1,15 +1,15 @@
 <?php
 include "./Includes/page.php";
-include "./Includes/productsData.php";
-include "./Includes/utils.php";
-
+include "./Includes/DAL/productsData.php";
+include "./Includes/Utils/utils.php";
 $db = new ProductsDB();
 $db->Products = array();
-
-//On ajoute le titre "Page des produits" de la page et on envoie du code html, ici un code js qui fait coucou à la console
-AddTop("Page d'accueil", "<script>console.log('Message envoyé dans la console JS depuis le <HEAD>');</script>");
 ?>
+
+<!--On ajoute le titre "Page des produits" de la page et on envoie du code html, ici un code js qui fait coucou à la console -->
+<?php AddTop("Page d'accueil", "<script>console.log('Message envoyé dans la console JS depuis le <HEAD>');</script>"); ?>
 <!-- Votre code HTML à mettre en-dessous -->
+
 <div class="container">
     <div class="jumbotron bg-dark text-white text-justify mt-2">
         <h2>Crazy Cupcakes</h2>
