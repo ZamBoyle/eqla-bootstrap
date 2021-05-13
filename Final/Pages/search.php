@@ -49,7 +49,7 @@ AddTop("Recherche");
             echo "</div>";
         } else {
             echo "<div class='alert alert-success p-2'>";
-            echo "<p><span class='font-weight-bold font-italic'>$what</span> a été trouvé dans notre liste de <a href='products.php'>produits</a>.</p>";
+            echo "<p><span class='font-weight-bold font-italic'>$what</span> a été trouvé dans notre liste de <a href='produits.php'>produits</a>.</p>";
             echo "</div>";
             DisplayProducts($produits);
         }
@@ -72,21 +72,17 @@ function RadioButtonIsChecked($radioButtonSearchBy){
     }
 }
 
-function GetWhat(){
-    return !empty($_POST["what"]) ? strtolower($_POST["what"]) : "";
-}
-
 function DisplaySearchForm()
 {
 ?>
     <form action="search.php" method="post">
         <div class="form-group">
-            <input name="what" type="text" class="form-control" id="searchInput" aria-describedby="Zone de rechercher" placeholder="Que recherchez-vous ?" required value='<?php echo GetWhat(); ?>'>
+            <input name="what" type="text" class="form-control" id="searchInput" aria-describedby="Zone de rechercher" placeholder="Que recherchez-vous ?" required value='<?php echo $_POST["what"]; ?>'>
         </div>
         <div class="form-row">
             <div class="col">
                 <div class="form-check">
-                    <input class="form-check-input" type="radio" name="searchBy" id="exampleRadios1" value="option2" ?>
+                    <input class="form-check-input" type="radio" name="searchBy" id="exampleRadios1" value="option2" <?php RadioButtonIsChecked("")?>>
                     <label class="form-check-label" for="exampleRadios2">
                         Recherche par <span class='font-weight-bold font-italic'>nom</span> de produit.
                     </label>
