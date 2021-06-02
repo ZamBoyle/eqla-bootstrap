@@ -9,6 +9,7 @@ AddTop("Recherche");
 <div class="container bg-light">
     <h1>Recherche de produits</h1>
     <?php
+    /*
     DisplaySearchForm();
     if (!empty($_POST["what"])) {
         $searchBy = "";
@@ -58,6 +59,7 @@ AddTop("Recherche");
         echo "<p>Vous n'avez pas entré ce que vous cherchez...</p>";
         echo "</div>";
     }
+    */
     ?>
     <br /><br /><br /><br /><br /><br /><br /><br />
 </div>

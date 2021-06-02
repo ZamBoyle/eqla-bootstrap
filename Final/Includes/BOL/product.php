@@ -22,6 +22,7 @@ class Product
         $tags = count($this->Tags) > 0 ? "<span class='font-weight-bold'>Tags: </span><span class='font-italic'>" . implode(", ", $this->Tags) . "</span>." : "";
         $btnClassAttributes = $this->Stock > 0 ? "class='btn btn-primary' aria-label='Ajouter au panier'" : "class='btn btn-warning disabled' aria-label='Impossible d''ajouter au panier:Plus en stock' ";
         $btnText = $this->Stock > 0 ? "Ajouter" : "Indisponible";
+        $disabled = $this->Stock <= 0 ? "disabled" : "";
 
         echo "
         <div class='d-inline-block my-1 p-2 bg-light border rounded'>
@@ -30,7 +31,7 @@ class Product
         <p>$this->Description.</p>
         <p>$tags</p>
         <p><span class='font-weight-bold'>Stock: </span> $this->Stock </p>
-        <button $btnClassAttributes><i class='bi bi-cart'></i> $btnText </button>
+        <button $btnClassAttributes $disabled><i class='bi bi-cart'></i> $btnText </button>
         </div>
         ";
     }
